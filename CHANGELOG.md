@@ -4,6 +4,17 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Fixed
+- AN505 board on QEMU 8.2 (Ubuntu 24.04, CI): UART0 RX is IRQ 33 there (TX/RX lines were
+  swapped until QEMU 9.1), so the shell never saw input; both IRQs are now enabled.
+- AN505 wake-up alarm moved from a re-armed CMSDK APB timer, which fired late or not at all
+  on QEMU 8.2, to the CMSDK dual timer in one-shot mode; the timer:lp clock ratio is measured at boot.
+- `ev_wait()` no longer assumes the pended context switch happens immediately.
+- KiCad pad table pinned to the KiCad 9.0.9 library (USB4105 shield pad is `S1` in 9.x).
+- Netlist output is deterministic (fixed SKiDL tags, no date/path); tests write to a temp dir.
+
 ## [0.1.0] - 2026-11-26
 
 ### Added

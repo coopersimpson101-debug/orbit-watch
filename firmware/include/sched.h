@@ -36,6 +36,7 @@ struct thread {
     enum thread_state state;
     uint32_t ev_pending, ev_mask;
     uint32_t slice;
+    int timed_out;           /* set by the ev_wait timeout timer */
     uint64_t switches;
     uint64_t cpu_cycles;     /* board_cycles() spent running (incl. ISRs) */
     uint32_t run_start;

@@ -48,6 +48,7 @@ static void timeout_fn(struct ktimer *t, void *arg)
 {
     struct thread *th = arg;
     (void)t;
+    th->timed_out = 1;
     if (th->state == T_BLOCKED) {
         th->state = T_READY;
         rq_push(&rq, &th->rq, th->prio);
@@ -237,17 +238,26 @@ uint32_t ev_wait(uint32_t mask, uint32_t timeout)
     struct thread *me = sched_cur;
     uint32_t got;
     uint32_t f = irq_save();
-    if (!(me->ev_pending & mask)) {
+    me->timed_out = 0;
+    if (!(me->ev_pending & mask) && timeout)
+        tq_add(&timers, &me->timeout, ticks + timeout);
+    /* Loop, do not assume one PendSV = one block: a pended exception may be
+     * recognised a few instructions late (QEMU 8.2 takes it only after the
+     * next irq_save/irq_restore pair), and a stale wake-up must not return. */
+    while (!(me->ev_pending & mask) && !me->timed_out) {
         me->ev_mask = mask;
         me->state = T_BLOCKED;
-        if (timeout)
-            tq_add(&timers, &me->timeout, ticks + timeout);
         irq_restore(f);
-        pendsv_trigger();
-        /* PendSV runs here (lowest priority, so only once we unmask) */
+        pendsv_trigger(); /* the switch happens here, with interrupts enabled */
         f = irq_save();
-        if (me->timeout.armed)
-            tq_del(&timers, &me->timeout);
+    }
+    if (me->timeout.armed)
+        tq_del(&timers, &me->timeout);
+    if (me->state != T_RUNNING) {
+        /* woken before the pended switch ran: we are still on the CPU */
+        if (me->rq.queued)
+            rq_remove(&rq, &me->rq);
+        me->state = T_RUNNING;
     }
     got = me->ev_pending & mask;
     me->ev_pending &= ~got;

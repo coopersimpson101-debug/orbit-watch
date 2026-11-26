@@ -31,7 +31,7 @@ static void cmd_help(void)
           "  hr now            start a heart-rate measurement\n"
           "  stats             watch statistics (JSON)\n"
           "  snap <tag>        dump the panel image (emulator)\n"
-          "  run <seconds>     let the watch run until uptime reaches <seconds>\n"
+          "  run <s> | +<s>    run until uptime <s>, or for <s> more seconds\n"
           "  poweroff          exit (emulator) / System OFF (hardware)\n");
 }
 

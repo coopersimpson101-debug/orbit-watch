@@ -61,7 +61,7 @@ const struct board_info board = {
 
 /* --------------------------------------------------------- cycle counter */
 
-const uint32_t board_cycles_hz = 128000000;
+uint32_t board_cycles_hz = 128000000;
 #define DWT_CTRL   REG32(0xE0001000)
 #define DWT_CYCCNT REG32(0xE0001004)
 #define DEMCR      REG32(0xE000EDFC)

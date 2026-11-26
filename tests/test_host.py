@@ -131,9 +131,11 @@ HAVE_SKIDL = importlib.util.find_spec("skidl") is not None
 
 @pytest.mark.skipif(not HAVE_SKIDL, reason="pip install skidl to generate the netlist")
 def test_schematic_netlist(tmp_path):
-    r = run([sys.executable, ROOT / "hardware" / "schematic" / "orbit_watch.py"])
+    # write to a temp dir (and run there: SKiDL drops .log/.erc files in the cwd)
+    out = tmp_path / "out"
+    r = run([sys.executable, ROOT / "hardware" / "schematic" / "orbit_watch.py", "--out", out],
+            cwd=tmp_path)
     assert r.returncode == 0, r.stdout[-2000:]
-    out = ROOT / "hardware" / "out"
     net = (out / "orbit_watch.net").read_text()
     for token in ("nRF54L15-QFAA", "nPM1300-QEAA", "BMI270", "MAX30101", "LS013B7DH05_FPC",
                   "I2C_SDA", "VDD_3V0", "VDD_1V8", "IMU_INT1"):
@@ -141,6 +143,10 @@ def test_schematic_netlist(tmp_path):
     checks = (out / "design_checks.txt").read_text()
     assert checks.startswith("orbit-watch rev A design checks: 0 failures")
     assert "FAIL" not in checks
+    # the committed outputs are reproducible and up to date
+    committed = ROOT / "hardware" / "out"
+    for f in ("orbit_watch.net", "bom.csv", "design_checks.txt", "erc.txt", "pinout.md"):
+        assert (out / f).read_bytes() == (committed / f).read_bytes(), f"{f} is stale"
 
 
 def test_power_budget_ordering():
@@ -160,7 +166,7 @@ def qemu_exe():
 @pytest.mark.skipif(not qemu_exe(), reason="qemu-system-arm not installed (runs in CI)")
 def test_qemu_smoke(firmware, tmp_path):
     import qemu_run
-    r = qemu_run.run(qemu_run.PROFILES["smoke"], tmp_path, firmware["an505"], 300)
+    r = qemu_run.run(qemu_run.PROFILES["smoke"], tmp_path, firmware["an505"], 60)
     assert r["exit_code"] == 0
     log = (tmp_path / "uart.log").read_text()
     assert "orbit-watch 0.1.0 on qemu-mps2-an505" in log
@@ -175,14 +181,16 @@ def test_qemu_smoke(firmware, tmp_path):
 @pytest.mark.skipif(not qemu_exe(), reason="qemu-system-arm not installed (runs in CI)")
 def test_qemu_tickless_lowpower(firmware, tmp_path):
     import qemu_run
-    cmds = ["face seconds off", "imu batch 10", "run 900", "stats", "poweroff"]
-    r = qemu_run.run(cmds, tmp_path, firmware["an505"], 600)
+    # Measure over a window that starts after the configuration commands: guest
+    # time keeps running (seconds face on) while the harness types them.
+    cmds = ["face seconds off", "imu batch 10", "stats", "run +900", "stats", "poweroff"]
+    r = qemu_run.run(cmds, tmp_path, firmware["an505"], 120)
     assert r["exit_code"] == 0
-    st = r["stats"]
-    up = st["uptime_s"]
-    assert 900 <= up < 1000
+    a, b = r["all_stats"][-2], r["all_stats"][-1]
+    up = b["uptime_s"] - a["uptime_s"]
+    assert 899 <= up <= 960  # plus the guest time that passes while "run +900" is typed
     # one wake per IMU batch, per minute and per PPG second, not 100 per second
-    assert st["wakeups"] < up / 3
-    deep = st["lp_sleep"][2] / st["lp_total"]
+    assert b["wakeups"] - a["wakeups"] < up / 3
+    deep = (b["lp_sleep"][2] - a["lp_sleep"][2]) / (b["lp_total"] - a["lp_total"])
     assert deep > 0.9
-    assert abs(st["steps"] - st["true_steps"]) <= max(10, st["true_steps"] * 0.03)
+    assert abs(b["steps"] - b["true_steps"]) <= max(10, b["true_steps"] * 0.03)

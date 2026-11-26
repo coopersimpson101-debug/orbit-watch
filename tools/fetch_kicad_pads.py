@@ -4,7 +4,7 @@
 Reads the footprint names from hardware/schematic/parts.py, then takes each
 .kicad_mod either from a local KiCad install (--lib-dir, e.g.
 /usr/share/kicad/footprints inside the kicad/kicad Docker image) or from the
-official library repository (gitlab.com/kicad/libraries/kicad-footprints),
+official library repository (gitlab.com/kicad/libraries/kicad-footprints, tag KICAD_LIB_TAG),
 and writes hardware/kicad_pads.json: {"Lib:Footprint": ["1", "2", ...]}.
 Only pad names are stored, nothing else from the library.
 
@@ -22,7 +22,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "hardware" / "kicad_pads.json"
-RAW = "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/master/{lib}.pretty/{fp}.kicad_mod"
+# Pinned to the KiCad 9 library release that the kicad/kicad:9.0 image ships, because
+# pad names change between major versions (e.g. the USB4105 shield pad is "S1" in 9.x
+# and "SH" on master).
+KICAD_LIB_TAG = "9.0.9"
+RAW = ("https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/" + KICAD_LIB_TAG +
+       "/{lib}.pretty/{fp}.kicad_mod")
 
 
 def footprints() -> list[str]:

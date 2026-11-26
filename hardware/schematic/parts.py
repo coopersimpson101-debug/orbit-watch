@@ -118,7 +118,7 @@ USB_C = template(
      ("A4", "VBUS", PAS), ("B4", "VBUS", PAS), ("A9", "VBUS", PAS), ("B9", "VBUS", PAS),
      ("A5", "CC1", PAS), ("B5", "CC2", PAS), ("A6", "DP1", PAS), ("B6", "DP2", PAS),
      ("A7", "DN1", PAS), ("B7", "DN2", PAS), ("A8", "SBU1", PAS), ("B8", "SBU2", PAS),
-     ("SH", "SHIELD", PAS)],
+     ("S1", "SHIELD", PAS)],  # KiCad 9 pad name
     mpn="USB4105-GF-A", mfr="GCT", datasheet="https://gct.co/connector/usb4105",
     desc="USB-C receptacle (charging only on rev A)", pinmap="kicad-fp")
 

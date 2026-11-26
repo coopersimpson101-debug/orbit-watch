@@ -26,7 +26,7 @@ void board_irq(unsigned irq);          /* external interrupt dispatcher */
 /* Fine CPU-time counter (32-bit, wraps): DWT CYCCNT on hardware, a CMSDK
  * timer at the system clock on the emulator. Used for per-thread CPU time. */
 uint32_t board_cycles(void);
-extern const uint32_t board_cycles_hz;
+extern uint32_t board_cycles_hz;
 /* Cycles the emulator spent on work that has no hardware counterpart
  * (synthesising sensor data, decoding SPI frames in the virtual panel). */
 uint64_t board_emu_overhead_cycles(void);

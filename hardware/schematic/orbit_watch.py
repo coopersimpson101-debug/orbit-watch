@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import csv
 import os
+import re
 import sys
 from collections import OrderedDict
 from pathlib import Path
@@ -344,12 +345,28 @@ def write_bom(path: Path, circuit_parts) -> int:
     return len(groups)
 
 
-def main() -> int:
+def normalize_netlist(path: Path) -> None:
+    """Make the netlist byte-for-byte reproducible: fixed date, no host path."""
+    text = path.read_text(encoding="utf-8")
+    text = re.sub(r'\(date "[^"]*"\)', '(date "generated")', text)
+    text = re.sub(r'\(source "[^"]*"\)', '(source "hardware/schematic/orbit_watch.py")', text)
+    path.write_text(text, encoding="utf-8", newline="\n")
+
+
+def main(argv=None) -> int:
+    import argparse
     import builtins
+    ap = argparse.ArgumentParser(description="generate the rev A netlist, BOM and checks")
+    ap.add_argument("--out", type=Path, default=OUT, help="output directory (default hardware/out)")
+    a = ap.parse_args(argv)
+    out = a.out
     default_circuit = builtins.default_circuit
-    OUT.mkdir(parents=True, exist_ok=True)
+    out.mkdir(parents=True, exist_ok=True)
     key = build()
-    erc_log = OUT / "erc.txt"
+    # deterministic SKiDL tags (they seed the netlist time-stamps / UUIDs)
+    for part in default_circuit.parts:
+        part.tag = part.ref
+    erc_log = out / "erc.txt"
     import io
     import logging
     buf = io.StringIO()
@@ -363,16 +380,17 @@ def main() -> int:
                  if ln.strip() and "No errors or warnings found" not in ln]
     erc_log.write_text("SKiDL ERC: %d messages\n" % len(erc_lines) + "\n".join(erc_lines) + "\n",
                        newline="\n")
-    generate_netlist(file_=str(OUT / "orbit_watch.net"))
+    generate_netlist(file_=str(out / "orbit_watch.net"))
+    normalize_netlist(out / "orbit_watch.net")
     parts = list(default_circuit.parts)
-    ngroups = write_bom(OUT / "bom.csv", parts)
+    ngroups = write_bom(out / "bom.csv", parts)
     report, failures = checks.run(default_circuit, key)
-    (OUT / "design_checks.txt").write_text(report, newline="\n")
-    (OUT / "pinout.md").write_text(checks.pinout_table(key["mcu"]), newline="\n")
+    (out / "design_checks.txt").write_text(report, newline="\n")
+    (out / "pinout.md").write_text(checks.pinout_table(key["mcu"]), newline="\n")
     nets = [n for n in default_circuit.nets if n.pins]
     print(f"parts {len(parts)}, BOM lines {ngroups}, nets {len(nets)}")
     print(f"ERC: {len(erc_lines)} messages -> {erc_log}")
-    print(f"design checks: {failures} failures -> {OUT / 'design_checks.txt'}")
+    print(f"design checks: {failures} failures -> {out / 'design_checks.txt'}")
     return 1 if failures or erc_lines else 0
 
 

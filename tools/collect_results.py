@@ -81,7 +81,8 @@ def main() -> int:
             r = qemu_run.run(qemu_run.PROFILES[prof], out, qemu_run.ELF, 1500)
             if r["exit_code"] != 0 or "stats" not in r:
                 raise SystemExit(f"QEMU profile {prof} failed: {r['exit_code']}")
-            keep = {k: r[k] for k in ("stats", "exit_code", "host_seconds", "commands")}
+            keep = {k: r[k] for k in ("stats", "exit_code", "host_seconds", "commands",
+                                      "icount_shift")}
             keep["pm_output"] = r["outputs"].get("pm", "")
             (RES / f"qemu_{prof}.json").write_text(json.dumps(keep, indent=1) + "\n",
                                                    newline="\n")

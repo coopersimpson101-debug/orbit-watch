@@ -1,11 +1,13 @@
 /* Board support for QEMU `-M mps2-an505` (Arm MPS2+ AN505, Cortex-M33).
  *
  * Mapping of the watch onto the emulated machine (all Secure aliases):
- *   console        CMSDK UART0 @ 0x50200000, RX IRQ 32
+ *   console        CMSDK UART0 @ 0x50200000, RX IRQ 32 (33 on QEMU <= 9.0)
  *   lp counter     CMSDK S32K timer @ 0x5002f000, free-running at 32 kHz
  *                  (QEMU's S32KCLK is 32000 Hz), stands in for the GRTC
- *   lp alarm       CMSDK TIMER1 @ 0x50001000 (IRQ 4) one-shot, programmed
- *                  from the lp delta (exactly 625 CPU cycles per lp cycle)
+ *   lp alarm       CMSDK dual timer @ 0x50002000 (IRQ 5), timer 1 in one-shot
+ *                  mode, programmed from the lp delta (the timer:lp clock ratio
+ *                  is measured at boot). A re-armed CMSDK APB timer (TIMER1)
+ *                  fires late or not at all on QEMU 8.2, the one-shot does not.
  *   SysTick        20 MHz system clock
  *   cycle counter  CMSDK TIMER0 free-running at 20 MHz (QEMU has no DWT CYCCNT);
  *                  with -icount shift=0 one count = 50 guest instructions
@@ -29,11 +31,22 @@
 
 #define UART0      0x50200000u
 #define TIMER0     0x50000000u
-#define TIMER1     0x50001000u
+#define DUALTIMER  0x50002000u /* CMSDK dual timer, timer 1 */
+#define IRQ_DUALTIMER 5
+#define DT_LOAD 0x00
+#define DT_CTRL 0x08
+#define DT_INTCLR 0x0c
+#define DT_EN (1u << 7)
+#define DT_IE (1u << 5)
+#define DT_32BIT (1u << 1)
+#define DT_ONESHOT (1u << 0)
 #define S32KTIMER  0x5002f000u
 #define IRQ_S32K   2
-#define IRQ_TIMER1 4
+/* UART0 RX is IRQ 32 in QEMU >= 9.1, but QEMU 9.0 and older wired the CMSDK
+ * UART's TX and RX interrupt lines the other way round (RX on 33). Enable
+ * both and drain RX from either. TX interrupts stay disabled in CTRL. */
 #define IRQ_UART0_RX 32
+#define IRQ_UART0_RX_OLDQEMU 33
 
 #define T_CTRL   0x00
 #define T_VALUE  0x04
@@ -95,8 +108,12 @@ void board_system_off(void)
 
 /* ---------------------------------------------------------- cycle counter */
 
-const uint32_t board_cycles_hz = 20000000;
+uint32_t board_cycles_hz = 20000000; /* replaced by the measured rate in board_init */
 static uint64_t emu_overhead;
+/* CMSDK timer counts per S32K cycle, Q8: measured at boot (and printed)
+ * rather than assumed, so the alarm stays right if a QEMU version or machine
+ * model clocks the timers differently. */
+static uint32_t timer_per_lp_q8 = 625u << 8;
 
 uint32_t board_cycles(void)
 {
@@ -140,20 +157,20 @@ void board_lp_alarm(uint64_t compare_raw)
     uint64_t cycles;
     if (delta == 0 || delta > 0x80000000u)
         delta = 1; /* already due */
-    cycles = (uint64_t)delta * (board.cpu_hz / board.lp_hz);
+    cycles = ((uint64_t)delta * timer_per_lp_q8) >> 8;
     if (cycles > 0xffffffffu)
         cycles = 0xffffffffu;
-    REG32(TIMER1 + T_CTRL) = 0;
-    REG32(TIMER1 + T_INT) = 1;
-    REG32(TIMER1 + T_RELOAD) = (uint32_t)cycles;
-    REG32(TIMER1 + T_CTRL) = 1u | 8u; /* enable + IRQ */
+    REG32(DUALTIMER + DT_CTRL) = 0;
+    REG32(DUALTIMER + DT_INTCLR) = 1;
+    REG32(DUALTIMER + DT_LOAD) = (uint32_t)cycles;
+    REG32(DUALTIMER + DT_CTRL) = DT_EN | DT_IE | DT_32BIT | DT_ONESHOT;
 }
 
 void board_lp_alarm_cancel(void)
 {
-    REG32(TIMER1 + T_CTRL) = 0;
-    REG32(TIMER1 + T_INT) = 1;
-    NVIC_ICPR(0) = 1u << IRQ_TIMER1;
+    REG32(DUALTIMER + DT_CTRL) = 0;
+    REG32(DUALTIMER + DT_INTCLR) = 1;
+    NVIC_ICPR(0) = 1u << IRQ_DUALTIMER;
 }
 
 void board_sleep(enum pm_state st, uint32_t wake_mask)
@@ -168,12 +185,13 @@ void board_sleep(enum pm_state st, uint32_t wake_mask)
 void board_irq(unsigned irq)
 {
     switch (irq) {
-    case IRQ_TIMER1:
-        REG32(TIMER1 + T_CTRL) = 0;
-        REG32(TIMER1 + T_INT) = 1;
+    case IRQ_DUALTIMER:
+        REG32(DUALTIMER + DT_CTRL) = 0;
+        REG32(DUALTIMER + DT_INTCLR) = 1;
         kernel_lp_alarm_isr();
         break;
     case IRQ_UART0_RX:
+    case IRQ_UART0_RX_OLDQEMU:
         /* clear first, then drain: a byte landing after the last read
          * re-raises the interrupt instead of being stranded in RXFULL */
         REG32(UART0 + U_INT) = 2u;
@@ -304,8 +322,23 @@ void board_init(void)
     REG32(S32KTIMER + T_CTRL) = 0;
     REG32(S32KTIMER + T_RELOAD) = 0xffffffffu;
     REG32(S32KTIMER + T_CTRL) = 1u;
-    nvic_enable(IRQ_TIMER1, PRIO_TIMER);
+    {
+        /* calibrate the CMSDK timer clock against the low-power counter */
+        uint32_t l0 = (uint32_t)board_lp_read(), l1, c0, c1;
+        while ((l1 = (uint32_t)board_lp_read()) == l0)
+            ;
+        c0 = board_cycles();
+        while ((uint32_t)board_lp_read() - l1 < 320)
+            ;
+        c1 = board_cycles();
+        timer_per_lp_q8 = (uint32_t)(((uint64_t)(c1 - c0) << 8) / 320);
+        board_cycles_hz = (uint32_t)(((uint64_t)timer_per_lp_q8 * board.lp_hz) >> 8);
+        kprintf("an505: CMSDK timer clock %u Hz (measured against S32K)\n",
+                (unsigned)board_cycles_hz);
+    }
+    nvic_enable(IRQ_DUALTIMER, PRIO_TIMER);
     nvic_enable(IRQ_UART0_RX, PRIO_TIMER);
+    nvic_enable(IRQ_UART0_RX_OLDQEMU, PRIO_TIMER);
     mip_panel_init(&vpanel);
     synth_accel_init(&acc, 25, 0x5eed1234u);
     synth_ppg_init(&ppg, 25, 0xbeef5678u);

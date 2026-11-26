@@ -19,38 +19,39 @@
   "hr_locked": 1,
   "ppg_wakes": 30,
   "ppg_samples": 750,
-  "wakeups": 602,
-  "tickless_sleeps": 602,
-  "early_wakes": 1,
+  "wakeups": 601,
+  "tickless_sleeps": 601,
+  "early_wakes": 0,
   "lp_total": 19232023,
   "lp_sleep": [
    0,
-   959375,
-   18259749
+   959374,
+   18259755
   ],
   "pm_entries": [
    0,
    30,
-   572
+   571
   ],
   "threads": {
-   "idle": 15686,
-   "shell": 241,
-   "ui": 7604506,
-   "sensor": 440654
+   "idle": 15811,
+   "shell": 242,
+   "ui": 7604662,
+   "sensor": 440795
   },
   "cycles_hz": 20000000,
-  "emu_overhead_cycles": 6439849,
-  "sleep_cycles": 12011952532,
+  "emu_overhead_cycles": 6439840,
+  "sleep_cycles": 12011951923,
   "time": "10:09:31"
  },
  "exit_code": 0,
- "host_seconds": 2.05,
+ "host_seconds": 3.25,
  "commands": [
   "face full on",
   "run 600",
   "stats",
   "poweroff"
  ],
+ "icount_shift": 0,
  "pm_output": ""
 }

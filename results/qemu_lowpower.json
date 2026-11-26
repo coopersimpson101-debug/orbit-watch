@@ -1,6 +1,6 @@
 {
  "stats": {
-  "uptime_s": 3600,
+  "uptime_s": 3610,
   "lp_hz": 32000,
   "show_seconds": 0,
   "full_refresh": 0,
@@ -12,40 +12,40 @@
   "rows_skipped_same": 1771,
   "true_steps": 4229,
   "steps": 4235,
-  "imu_wakes": 360,
-  "imu_samples": 90000,
+  "imu_wakes": 361,
+  "imu_samples": 90250,
   "hr_bpm": 92,
   "hr_sessions": 6,
   "hr_locked": 6,
   "ppg_wakes": 180,
   "ppg_samples": 4500,
-  "wakeups": 527,
-  "tickless_sleeps": 527,
-  "early_wakes": 5,
-  "lp_total": 115200012,
+  "wakeups": 525,
+  "tickless_sleeps": 525,
+  "early_wakes": 2,
+  "lp_total": 115520011,
   "lp_sleep": [
    0,
-   5759486,
-   109435131
+   5759485,
+   109755121
   ],
   "pm_entries": [
    0,
    180,
-   347
+   345
   ],
   "threads": {
-   "idle": 12383,
-   "shell": 1472,
-   "ui": 549707,
-   "sensor": 2809148
+   "idle": 12418,
+   "shell": 1456,
+   "ui": 549727,
+   "sensor": 2815374
   },
   "cycles_hz": 20000000,
-  "emu_overhead_cycles": 2544263,
-  "sleep_cycles": 71996633791,
-  "time": "10:59:30"
+  "emu_overhead_cycles": 2549207,
+  "sleep_cycles": 72196626922,
+  "time": "10:59:40"
  },
  "exit_code": 0,
- "host_seconds": 1.89,
+ "host_seconds": 3.68,
  "commands": [
   "face seconds off",
   "imu batch 10",
@@ -56,5 +56,6 @@
   "ps",
   "poweroff"
  ],
- "pm_output": "pm\r\nuptime 3600 s, wakeups 528, locks 0x0, deep allowed\r\n  idle      entries        0  residency   0.00 %\r\n  tickless  entries      180  residency   4.99 %\r\n  deep      entries      348  residency  94.99 %\r\n  active                        0.00 %\r\ntickless: 528 sleeps, 366000 ticks planned, 360000 credited, 6 early, 0 late, 0 rejected\r\nwatch> "
+ "icount_shift": 0,
+ "pm_output": "pm\r\nuptime 3610 s, wakeups 526, locks 0x0, deep allowed\r\n  idle      entries        0  residency   0.00 %\r\n  tickless  entries      180  residency   4.98 %\r\n  deep      entries      346  residency  95.00 %\r\n  active                        0.00 %\r\ntickless: 526 sleeps, 364000 ticks planned, 361000 credited, 3 early, 0 late, 0 rejected\r\nwatch> "
 }

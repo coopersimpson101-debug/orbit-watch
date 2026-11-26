@@ -79,6 +79,8 @@ static inline void nvic_disable(unsigned irq)
 static inline void pendsv_trigger(void)
 {
     SCB_ICSR = SCB_ICSR_PENDSVSET;
+    /* make the pended exception take effect before the next instruction */
+    __asm__ volatile("dsb\n isb" ::: "memory");
 }
 
 /* Interrupt priorities (upper bits significant; PendSV lowest). */

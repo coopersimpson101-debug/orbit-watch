@@ -49,10 +49,11 @@ def val(ds, key, unit_scale=1.0) -> float:
     return float(ds[key]["value"]) * unit_scale
 
 
-def model(ds: dict, st: dict) -> dict:
+def model(ds: dict, st: dict, icount_shift: int = 0) -> dict:
     up = st["uptime_s"]
     hz = st["cycles_hz"]
-    insn_per_tick = 1e9 / hz  # -icount shift=0: one instruction per virtual ns
+    # -icount shift=N: one instruction per 2**N ns of virtual time
+    insn_per_tick = 1e9 / hz / (1 << icount_shift)
     awake = sum(st["threads"].values()) - st["emu_overhead_cycles"]
     insn_per_s = awake * insn_per_tick / up
     cpu_ma = val(ds, "nrf_cpu")
@@ -113,8 +114,8 @@ def main() -> int:
         if not p.exists():
             print(f"skip {prof}: {p} missing (python tools/collect_results.py)")
             continue
-        st = json.loads(p.read_text())["stats"]
-        m = model(ds, st)
+        run = json.loads(p.read_text())
+        m = model(ds, run["stats"], run.get("icount_shift", 0))
         m["description"] = desc
         out["profiles"][prof] = m
         print(f"{prof:12s} {m['total_ua']:8.2f} uA  -> {m['battery_life_days']:6.1f} days  ({desc})")

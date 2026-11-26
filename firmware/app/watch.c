@@ -303,8 +303,10 @@ void watch_shell_cmd(int argc, char **argv)
         watch_print_stats();
     } else if (!k_strcmp(c, "snap") && argc == 2) {
         board_snapshot(argv[1]);
-    } else if (!k_strcmp(c, "run") && argc == 2 && !parse_u64(argv[1], &v)) {
-        uint64_t target = v * OW_HZ;
+    } else if (!k_strcmp(c, "run") && argc == 2 &&
+               !parse_u64(argv[1][0] == '+' ? argv[1] + 1 : argv[1], &v)) {
+        /* "run N": until uptime N s; "run +N": for N s from now */
+        uint64_t target = v * OW_HZ + (argv[1][0] == '+' ? ticks_now() : 0);
         while (ticks_now() < target) {
             uint64_t left = target - ticks_now();
             thread_sleep((uint32_t)(left > 600u * OW_HZ ? 600u * OW_HZ : left));

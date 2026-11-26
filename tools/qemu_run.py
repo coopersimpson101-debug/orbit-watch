@@ -31,6 +31,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 ELF = ROOT / "build" / "an505" / "orbit-watch.elf"
+# one guest instruction = 2**ICOUNT_SHIFT ns of virtual time (recorded in the
+# results so tools/power_budget.py can turn timer counts into instructions)
+ICOUNT_SHIFT = 0
 LOOPBACK = socket.inet_ntoa(struct.pack("!I", socket.INADDR_LOOPBACK))  # IPv4 loopback
 
 PROFILES = {
@@ -99,7 +102,7 @@ def run(cmds: list[str], outdir: Path, elf: Path, timeout: float) -> dict:
     qemu = [find_qemu(), "-M", "mps2-an505", "-display", "none", "-monitor", "none",
             "-serial", f"tcp:{LOOPBACK}:{port},server=on,wait=on",
             "-semihosting-config", "enable=on,target=native",
-            "-icount", "shift=0,sleep=off", "-kernel", str(elf)]
+            "-icount", f"shift={ICOUNT_SHIFT},sleep=off", "-kernel", str(elf)]
     log_path = outdir / "uart.log"
     t0 = time.time()
     proc = subprocess.Popen(qemu, cwd=outdir, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
@@ -113,7 +116,7 @@ def run(cmds: list[str], outdir: Path, elf: Path, timeout: float) -> dict:
     if sock is None:
         proc.kill()
         raise SystemExit("could not connect to QEMU's serial port")
-    result = {"commands": cmds, "outputs": {}, "qemu": qemu[0]}
+    result = {"commands": cmds, "outputs": {}, "qemu": qemu[0], "icount_shift": ICOUNT_SHIFT}
     with open(log_path, "w", encoding="utf-8", newline="\n") as log:
         s = Session(sock, log)
         s.read_until(b"watch> ", timeout)
@@ -131,6 +134,7 @@ def run(cmds: list[str], outdir: Path, elf: Path, timeout: float) -> dict:
     m = re.findall(r"STATS (\{.*\})", text)
     if m:
         result["stats"] = json.loads(m[-1])
+        result["all_stats"] = [json.loads(x) for x in m]
     (outdir / "result.json").write_text(json.dumps(result, indent=2), newline="\n")
     return result
 

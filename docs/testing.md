@@ -25,5 +25,10 @@ when `skidl` is not installed.
   PPG signals (`app/synth.c`) following a one-hour activity script, and the display SPI frames
   are decoded by the virtual panel. Time spent on that emulator-only work is measured and
   subtracted before modelling.
+* Tested on QEMU 11.1.3 (local) and 8.2 (Ubuntu 24.04, CI). Two differences between them
+  matter to the firmware: QEMU 9.0 and older wire the AN505 UART0 RX interrupt to IRQ 33
+  instead of 32 (the board enables both), and on 8.2 a CMSDK APB timer that is stopped and
+  re-armed for every sleep fires late or not at all, so the wake-up alarm uses the CMSDK dual
+  timer in one-shot mode instead.
 * The time between typed shell commands also advances the guest clock. `run N` waits for an
   absolute uptime, so the measured windows do not depend on typing speed.

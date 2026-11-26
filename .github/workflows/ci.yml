@@ -71,8 +71,6 @@ jobs:
   kicad:
     name: netlist vs official KiCad libraries (kicad/kicad container)
     runs-on: ubuntu-24.04
-    # New job: it has not run yet. Kept non-blocking until it has passed once.
-    continue-on-error: true
     container:
       image: kicad/kicad:9.0
       options: --user root
