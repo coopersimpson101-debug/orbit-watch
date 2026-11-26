@@ -1,51 +1,51 @@
 {
  "stats": {
-  "uptime_s": 3604,
+  "uptime_s": 3600,
   "lp_hz": 32000,
   "show_seconds": 1,
   "full_refresh": 0,
   "imu_batch_s": 1,
-  "ui_updates": 3604,
-  "frames": 3605,
-  "display_bytes": 1441830,
-  "display_rows": 71731,
-  "rows_skipped_same": 41121,
+  "ui_updates": 3600,
+  "frames": 3601,
+  "display_bytes": 1440822,
+  "display_rows": 71681,
+  "rows_skipped_same": 41115,
   "true_steps": 4229,
   "steps": 4235,
-  "imu_wakes": 3604,
-  "imu_samples": 90100,
+  "imu_wakes": 3600,
+  "imu_samples": 90000,
   "hr_bpm": 92,
   "hr_sessions": 6,
   "hr_locked": 6,
   "ppg_wakes": 180,
   "ppg_samples": 4500,
-  "wakeups": 3608,
-  "tickless_sleeps": 3608,
-  "early_wakes": 4,
-  "lp_total": 115328004,
+  "wakeups": 3600,
+  "tickless_sleeps": 3600,
+  "early_wakes": 0,
+  "lp_total": 115200005,
   "lp_sleep": [
    0,
-   5758473,
-   109544962
+   5758472,
+   109416983
   ],
   "pm_entries": [
    0,
    180,
-   3428
+   3420
   ],
   "threads": {
-   "idle": 94766,
-   "shell": 2922,
-   "ui": 12445587,
-   "sensor": 2830770
+   "idle": 94505,
+   "shell": 2074,
+   "ui": 12438802,
+   "sensor": 2828330
   },
   "cycles_hz": 20000000,
-  "emu_overhead_cycles": 6679845,
-  "sleep_cycles": 72064627768,
-  "time": "10:59:34"
+  "emu_overhead_cycles": 6674799,
+  "sleep_cycles": 71984637792,
+  "time": "10:59:30"
  },
  "exit_code": 0,
- "host_seconds": 5.21,
+ "host_seconds": 4.05,
  "commands": [
   "info",
   "ps",
@@ -59,5 +59,5 @@
   "poweroff"
  ],
  "icount_shift": 0,
- "pm_output": "pm\r\nuptime 3604 s, wakeups 3609, locks 0x0, deep allowed\r\n  idle      entries        0  residency   0.00 %\r\n  tickless  entries      180  residency   4.99 %\r\n  deep      entries     3429  residency  94.98 %\r\n  active                        0.02 %\r\ntickless: 3609 sleeps, 360900 ticks planned, 360400 credited, 5 early, 0 late, 0 rejected\r\nwatch> "
+ "pm_output": "pm\r\nuptime 3600 s, wakeups 3600, locks 0x0, deep allowed\r\n  idle      entries        0  residency   0.00 %\r\n  tickless  entries      180  residency   4.99 %\r\n  deep      entries     3420  residency  94.98 %\r\n  active                        0.02 %\r\ntickless: 3600 sleeps, 360000 ticks planned, 360000 credited, 0 early, 0 late, 0 rejected\r\nwatch> "
 }

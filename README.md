@@ -46,8 +46,8 @@ run × stated assumptions; no BLE). It is not a measurement: see
 - **Tickless idle with zero drift.** Kernel time is slaved to the low-power counter through one
   fixed anchor, so the 327.68-cycles-per-tick fraction never accumulates. A soak test of 448,845
   random sleeps over four counter configurations (24-bit RTC to 52-bit GRTC) checks every wake-up.
-  In an emulated hour the watch woke **3,608 times (once per second) and spent 94.99 % of the
-  time in `PM_DEEP`** with the seconds shown. With the minute face it woke 525 times.
+  In an emulated hour the watch woke **3,600 times (once per second) and spent 94.98 % of the
+  time in `PM_DEEP`** with the seconds shown. With the minute face it woke 522 times.
 - **Partial refresh that pays off.** Dirty-row tracking plus identical-row suppression cuts SPI
   traffic to the memory LCD from **201,720 to 28,778 bytes per minute (7.0×)** with seconds
   shown, and from 3,362 to 1,129 bytes per minute (3.0×) on the minute face. These are host
@@ -190,17 +190,17 @@ seconds shown.
 
 **Emulated hour** on QEMU mps2-an505 ([results/qemu_active.json](results/qemu_active.json),
 [results/qemu_lowpower.json](results/qemu_lowpower.json)). These figures are 🧪 emulated:
-instruction counts are real for this binary, timings are virtual. Counts vary by a few between
-runs, because guest time keeps running while the harness types commands. The runs are on
-QEMU 11.1.3 here; CI runs the same profiles on Ubuntu's QEMU 8.2.
+instruction counts are real for this binary, timings are virtual. The harness sends the
+commands as one script, so the runs are repeatable: QEMU 11.1.3 (here) and 8.2 (Ubuntu, CI)
+give the same counts to within one wake-up.
 
 | | seconds face, 1 s IMU batches | minute face, 10 s IMU batches |
 |---|---:|---:|
-| wake-ups in the run (3,604 s / 3,610 s of uptime) | 3,608 | 525 |
-| time in PM_DEEP / PM_TICKLESS (during HR sessions) | 94.99 % / 4.99 % | 95.01 % / 4.99 % |
-| tickless sleeps woken early (UART input) / late | 4 / 0 | 2 / 0 |
-| firmware instructions per second (emulator-only work subtracted) | 120.6 k | 11.5 k |
-| SPI bytes to the panel / protocol errors | 1,441,830 / 0 | 64,076 / 0 |
+| wake-ups in the hour | 3,600 | 522 |
+| time in PM_DEEP / PM_TICKLESS (during HR sessions) | 94.98 % / 5.00 % | 95.00 % / 5.00 % |
+| tickless sleeps woken early / late | 0 / 0 | 0 / 0 |
+| firmware instructions per second (emulator-only work subtracted) | 120.7 k | 11.5 k |
+| SPI bytes to the panel / protocol errors | 1,440,822 / 0 | 64,076 / 0 |
 | steps counted vs synthetic ground truth | 4,235 vs 4,229 | 4,235 vs 4,229 |
 | HR sessions (30 s every 10 min) that produced a reading | 6 / 6 | 6 / 6 |
 

@@ -13,6 +13,9 @@ All notable changes to this project are documented here. The format follows
   on QEMU 8.2, to the CMSDK dual timer in one-shot mode; the timer:lp clock ratio is measured at boot.
 - `ev_wait()` no longer assumes the pended context switch happens immediately.
 - KiCad pad table pinned to the KiCad 9.0.9 library (USB4105 shield pad is `S1` in 9.x).
+- QEMU harness sends the command list as one script: with `-icount sleep=off`, host latency
+  between interactive commands added guest time (minutes on a loaded CI runner), which shifted
+  the synthetic activity script and the measured windows. Console RX queue is now 256 bytes.
 - Netlist output is deterministic (fixed SKiDL tags, no date/path); tests write to a temp dir.
 
 ## [0.1.0] - 2026-11-26

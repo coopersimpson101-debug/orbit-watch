@@ -30,5 +30,8 @@ when `skidl` is not installed.
   instead of 32 (the board enables both), and on 8.2 a CMSDK APB timer that is stopped and
   re-armed for every sleep fires late or not at all, so the wake-up alarm uses the CMSDK dual
   timer in one-shot mode instead.
-* The time between typed shell commands also advances the guest clock. `run N` waits for an
-  absolute uptime, so the measured windows do not depend on typing speed.
+* `tools/qemu_run.py` sends the whole command list in one go after the first prompt. With
+  `sleep=off` the guest clock races ahead whenever the guest idles, so an interactive
+  command-by-command dialogue would let host latency add guest time between commands (on a
+  loaded CI runner that was minutes). Queued in the console buffer, the commands run back to
+  back, and runs are repeatable across hosts.

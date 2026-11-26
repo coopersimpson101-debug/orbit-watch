@@ -5,27 +5,27 @@ lowpower,nRF54L15 wake-up overhead,0.004
 lowpower,SPI/I2C EasyDMA (display + sensors),1.718
 lowpower,BMI270 accel low-power,3.816
 lowpower,LS013B7DH05 display,19.078
-lowpower,MAX30101 analog (sessions),17.503
-lowpower,MAX30101 green LED (from VSYS),7.378
+lowpower,MAX30101 analog (sessions),17.551
+lowpower,MAX30101 green LED (from VSYS),7.398
 lowpower,nPM1300 quiescent,1.1
-lowpower,TOTAL,53.7
+lowpower,TOTAL,53.76
 active,"nRF54L15 sleep (System ON idle, 256 KB RAM)",2.766
-active,nRF54L15 CPU (instructions x CPI),3.506
+active,nRF54L15 CPU (instructions x CPI),3.507
 active,nRF54L15 wake-up overhead,0.025
-active,SPI/I2C EasyDMA (display + sensors),3.176
+active,SPI/I2C EasyDMA (display + sensors),3.177
 active,BMI270 accel low-power,3.816
 active,LS013B7DH05 display,19.078
-active,MAX30101 analog (sessions),17.532
-active,MAX30101 green LED (from VSYS),7.39
+active,MAX30101 analog (sessions),17.551
+active,MAX30101 green LED (from VSYS),7.398
 active,nPM1300 quiescent,1.1
-active,TOTAL,58.39
+active,TOTAL,58.42
 fullrefresh,"nRF54L15 sleep (System ON idle, 256 KB RAM)",2.766
-fullrefresh,nRF54L15 CPU (instructions x CPI),3.921
+fullrefresh,nRF54L15 CPU (instructions x CPI),3.912
 fullrefresh,nRF54L15 wake-up overhead,0.025
-fullrefresh,SPI/I2C EasyDMA (display + sensors),14.492
+fullrefresh,SPI/I2C EasyDMA (display + sensors),14.394
 fullrefresh,BMI270 accel low-power,3.816
 fullrefresh,LS013B7DH05 display,19.078
-fullrefresh,MAX30101 analog (sessions),17.522
-fullrefresh,MAX30101 green LED (from VSYS),7.386
+fullrefresh,MAX30101 analog (sessions),17.551
+fullrefresh,MAX30101 green LED (from VSYS),7.398
 fullrefresh,nPM1300 quiescent,1.1
-fullrefresh,TOTAL,70.11
+fullrefresh,TOTAL,70.04

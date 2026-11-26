@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 """Boot orbit-watch on QEMU `-M mps2-an505` (Cortex-M33) and drive its shell.
 
-The UART is connected over a local TCP socket, commands are typed one at a
-time after each prompt, and the transcript is saved. QEMU runs with
-`-icount shift=0,sleep=off`: guest time is derived from the instruction
-count and jumps ahead whenever the guest sleeps in WFI, so an hour of
-watch time takes seconds of host time, and the low-power counter, SysTick
-and the wake-up timer all follow the same deterministic virtual clock.
+The UART is connected over a local TCP socket. After the first prompt the whole
+command list is sent in one go and queued in the firmware's console buffer,
+so the commands run back to back in guest time, independent of host speed;
+the transcript is saved.
 
 Semihosting is enabled so the firmware can write the virtual panel image
 (`snap <tag>` -> <outdir>/<tag>.pbm) and exit with a status code.
@@ -34,6 +32,7 @@ ELF = ROOT / "build" / "an505" / "orbit-watch.elf"
 # one guest instruction = 2**ICOUNT_SHIFT ns of virtual time (recorded in the
 # results so tools/power_budget.py can turn timer counts into instructions)
 ICOUNT_SHIFT = 0
+RX_QUEUE = 256  # firmware/kernel/console.c RXQ
 LOOPBACK = socket.inet_ntoa(struct.pack("!I", socket.INADDR_LOOPBACK))  # IPv4 loopback
 
 PROFILES = {
@@ -45,7 +44,7 @@ PROFILES = {
                  "pm", "ps", "poweroff"],
     # same face, but every update resends the whole frame (for comparison)
     "fullrefresh": ["face full on", "run 600", "stats", "poweroff"],
-    "smoke": ["help", "info", "ps", "mem", "uptime", "face", "run 60", "stats", "pm", "snap smoke",
+    "smoke": ["help", "info", "ps", "mem", "uptime", "face", "run +60", "stats", "pm", "snap smoke",
               "poweroff"],
 }
 
@@ -63,7 +62,7 @@ def free_port() -> int:
         return s.getsockname()[1]
 
 
-class Session:
+class Session:  # reads the UART stream; commands are sent as one script by run()
     def __init__(self, sock: socket.socket, log):
         self.sock = sock
         self.buf = b""
@@ -89,12 +88,6 @@ class Session:
         out, self.buf = self.buf[:i], self.buf[i:]
         return out
 
-    def command(self, cmd: str, timeout: float) -> str:
-        self.sock.sendall(cmd.encode() + b"\r")
-        if cmd == "poweroff":
-            return ""
-        return self.read_until(b"watch> ", timeout).decode(errors="replace")
-
 
 def run(cmds: list[str], outdir: Path, elf: Path, timeout: float) -> dict:
     outdir.mkdir(parents=True, exist_ok=True)
@@ -117,11 +110,23 @@ def run(cmds: list[str], outdir: Path, elf: Path, timeout: float) -> dict:
         proc.kill()
         raise SystemExit("could not connect to QEMU's serial port")
     result = {"commands": cmds, "outputs": {}, "qemu": qemu[0], "icount_shift": ICOUNT_SHIFT}
+    script = "".join(c + "\r" for c in cmds).encode()
+    if len(script) >= RX_QUEUE:
+        raise SystemExit(f"command script is {len(script)} bytes; the console queue holds {RX_QUEUE - 1}")
     with open(log_path, "w", encoding="utf-8", newline="\n") as log:
         s = Session(sock, log)
         s.read_until(b"watch> ", timeout)
+        # Send the whole script at once. With -icount sleep=off the guest clock
+        # races ahead whenever the guest idles, including while the host is
+        # between two commands, so a command-by-command dialogue makes guest
+        # time depend on host speed (a loaded CI runner added minutes of guest
+        # time). Queued in the firmware's console buffer, the commands run back
+        # to back with no host round trip in between.
+        sock.sendall(script)
         for c in cmds:
-            result["outputs"][c] = s.command(c, timeout)
+            if c == "poweroff":
+                break
+            result["outputs"][c] = s.read_until(b"watch> ", timeout).decode(errors="replace")
     try:
         rc = proc.wait(timeout=timeout)
     except subprocess.TimeoutExpired:

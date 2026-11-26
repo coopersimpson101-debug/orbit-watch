@@ -1,51 +1,51 @@
 {
  "stats": {
-  "uptime_s": 601,
+  "uptime_s": 600,
   "lp_hz": 32000,
   "show_seconds": 1,
   "full_refresh": 1,
   "imu_batch_s": 1,
-  "ui_updates": 601,
-  "frames": 602,
-  "display_bytes": 2022864,
-  "display_rows": 101083,
-  "rows_skipped_same": 53,
-  "true_steps": 541,
-  "steps": 542,
-  "imu_wakes": 601,
-  "imu_samples": 15025,
+  "ui_updates": 600,
+  "frames": 601,
+  "display_bytes": 2003982,
+  "display_rows": 100139,
+  "rows_skipped_same": 59,
+  "true_steps": 539,
+  "steps": 540,
+  "imu_wakes": 600,
+  "imu_samples": 15000,
   "hr_bpm": 62,
   "hr_sessions": 1,
   "hr_locked": 1,
   "ppg_wakes": 30,
   "ppg_samples": 750,
-  "wakeups": 601,
-  "tickless_sleeps": 601,
-  "early_wakes": 0,
-  "lp_total": 19232023,
+  "wakeups": 602,
+  "tickless_sleeps": 602,
+  "early_wakes": 2,
+  "lp_total": 19200023,
   "lp_sleep": [
    0,
    959374,
-   18259755
+   18227858
   ],
   "pm_entries": [
    0,
    30,
-   571
+   572
   ],
   "threads": {
-   "idle": 15811,
-   "shell": 242,
-   "ui": 7604662,
-   "sensor": 440795
+   "idle": 15805,
+   "shell": 213,
+   "ui": 7541702,
+   "sensor": 439983
   },
   "cycles_hz": 20000000,
-  "emu_overhead_cycles": 6439840,
-  "sleep_cycles": 12011951923,
-  "time": "10:09:31"
+  "emu_overhead_cycles": 6382423,
+  "sleep_cycles": 11992015675,
+  "time": "10:09:30"
  },
  "exit_code": 0,
- "host_seconds": 3.25,
+ "host_seconds": 2.85,
  "commands": [
   "face full on",
   "run 600",

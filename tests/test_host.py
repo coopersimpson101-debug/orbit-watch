@@ -181,14 +181,13 @@ def test_qemu_smoke(firmware, tmp_path):
 @pytest.mark.skipif(not qemu_exe(), reason="qemu-system-arm not installed (runs in CI)")
 def test_qemu_tickless_lowpower(firmware, tmp_path):
     import qemu_run
-    # Measure over a window that starts after the configuration commands: guest
-    # time keeps running (seconds face on) while the harness types them.
+    # qemu_run sends the commands as one script, so no guest time passes between them
     cmds = ["face seconds off", "imu batch 10", "stats", "run +900", "stats", "poweroff"]
     r = qemu_run.run(cmds, tmp_path, firmware["an505"], 120)
     assert r["exit_code"] == 0
     a, b = r["all_stats"][-2], r["all_stats"][-1]
     up = b["uptime_s"] - a["uptime_s"]
-    assert 899 <= up <= 960  # plus the guest time that passes while "run +900" is typed
+    assert 899 <= up <= 902
     # one wake per IMU batch, per minute and per PPG second, not 100 per second
     assert b["wakeups"] - a["wakeups"] < up / 3
     deep = (b["lp_sleep"][2] - a["lp_sleep"][2]) / (b["lp_total"] - a["lp_total"])

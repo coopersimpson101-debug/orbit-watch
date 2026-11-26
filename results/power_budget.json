@@ -3,13 +3,13 @@
   "profiles": {
     "lowpower": {
       "inputs": {
-        "uptime_s": 3610,
-        "wakeups_per_s": 0.14542936288088643,
-        "instructions_per_s": 11492.631578947368,
-        "cpu_active_fraction": 0.0001346792763157895,
-        "display_bytes_per_s": 17.749584487534626,
-        "hr_duty": 0.04986149584487535,
-        "dma_fraction": 0.0036011379501385042
+        "uptime_s": 3600,
+        "wakeups_per_s": 0.145,
+        "instructions_per_s": 11495.708333333334,
+        "cpu_active_fraction": 0.00013471533203125,
+        "display_bytes_per_s": 17.79888888888889,
+        "hr_duty": 0.05,
+        "dma_fraction": 0.0036017661111111114
       },
       "battery_ua": {
         "nRF54L15 sleep (System ON idle, 256 KB RAM)": 2.766,
@@ -18,62 +18,62 @@
         "SPI/I2C EasyDMA (display + sensors)": 1.718,
         "BMI270 accel low-power": 3.816,
         "LS013B7DH05 display": 19.078,
-        "MAX30101 analog (sessions)": 17.503,
-        "MAX30101 green LED (from VSYS)": 7.378,
+        "MAX30101 analog (sessions)": 17.551,
+        "MAX30101 green LED (from VSYS)": 7.398,
         "nPM1300 quiescent": 1.1
       },
-      "total_ua": 53.7,
-      "battery_life_days": 139.7,
+      "total_ua": 53.76,
+      "battery_life_days": 139.5,
       "description": "minute face, 10 s IMU batches"
     },
     "active": {
       "inputs": {
-        "uptime_s": 3604,
-        "wakeups_per_s": 1.0011098779134295,
-        "instructions_per_s": 120618.75693673696,
-        "cpu_active_fraction": 0.001413501057852386,
-        "display_bytes_per_s": 400.0638179800222,
-        "hr_duty": 0.049944506104328525,
-        "dma_fraction": 0.006659791897891232
+        "uptime_s": 3600,
+        "wakeups_per_s": 1.0,
+        "instructions_per_s": 120679.33333333333,
+        "cpu_active_fraction": 0.0014142109375,
+        "display_bytes_per_s": 400.22833333333335,
+        "hr_duty": 0.05,
+        "dma_fraction": 0.006661201666666667
       },
       "battery_ua": {
         "nRF54L15 sleep (System ON idle, 256 KB RAM)": 2.766,
-        "nRF54L15 CPU (instructions x CPI)": 3.506,
+        "nRF54L15 CPU (instructions x CPI)": 3.507,
         "nRF54L15 wake-up overhead": 0.025,
-        "SPI/I2C EasyDMA (display + sensors)": 3.176,
+        "SPI/I2C EasyDMA (display + sensors)": 3.177,
         "BMI270 accel low-power": 3.816,
         "LS013B7DH05 display": 19.078,
-        "MAX30101 analog (sessions)": 17.532,
-        "MAX30101 green LED (from VSYS)": 7.39,
+        "MAX30101 analog (sessions)": 17.551,
+        "MAX30101 green LED (from VSYS)": 7.398,
         "nPM1300 quiescent": 1.1
       },
-      "total_ua": 58.39,
-      "battery_life_days": 128.5,
+      "total_ua": 58.42,
+      "battery_life_days": 128.4,
       "description": "seconds face, 1 s IMU batches"
     },
     "fullrefresh": {
       "inputs": {
-        "uptime_s": 601,
-        "wakeups_per_s": 1.0,
-        "instructions_per_s": 134914.309484193,
-        "cpu_active_fraction": 0.001581027064267887,
-        "display_bytes_per_s": 3365.8302828618966,
-        "hr_duty": 0.04991680532445923,
-        "dma_fraction": 0.030385876871880196
+        "uptime_s": 600,
+        "wakeups_per_s": 1.0033333333333334,
+        "instructions_per_s": 134606.66666666666,
+        "cpu_active_fraction": 0.001577421875,
+        "display_bytes_per_s": 3339.97,
+        "hr_duty": 0.05,
+        "dma_fraction": 0.030179135
       },
       "battery_ua": {
         "nRF54L15 sleep (System ON idle, 256 KB RAM)": 2.766,
-        "nRF54L15 CPU (instructions x CPI)": 3.921,
+        "nRF54L15 CPU (instructions x CPI)": 3.912,
         "nRF54L15 wake-up overhead": 0.025,
-        "SPI/I2C EasyDMA (display + sensors)": 14.492,
+        "SPI/I2C EasyDMA (display + sensors)": 14.394,
         "BMI270 accel low-power": 3.816,
         "LS013B7DH05 display": 19.078,
-        "MAX30101 analog (sessions)": 17.522,
-        "MAX30101 green LED (from VSYS)": 7.386,
+        "MAX30101 analog (sessions)": 17.551,
+        "MAX30101 green LED (from VSYS)": 7.398,
         "nPM1300 quiescent": 1.1
       },
-      "total_ua": 70.11,
-      "battery_life_days": 107.0,
+      "total_ua": 70.04,
+      "battery_life_days": 107.1,
       "description": "seconds face, full-frame refresh"
     }
   }

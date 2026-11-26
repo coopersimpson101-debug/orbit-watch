@@ -7,7 +7,7 @@
 #include "kprintf.h"
 #include "sched.h"
 
-#define RXQ 64
+#define RXQ 256 /* holds a whole scripted session (tools/qemu_run.py) */
 static volatile char rxq[RXQ];
 static volatile unsigned rx_head, rx_tail;
 static struct thread *reader;
