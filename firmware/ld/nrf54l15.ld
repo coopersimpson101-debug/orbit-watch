@@ -1,0 +1,7 @@
+/* nRF54L15 (Secure): 1524 KiB RRAM at 0x00000000, 256 KiB RAM at 0x20000000. */
+MEMORY
+{
+    FLASH (rx)  : ORIGIN = 0x00000000, LENGTH = 1524K
+    RAM   (rwx) : ORIGIN = 0x20000000, LENGTH = 256K
+}
+INCLUDE common.ld

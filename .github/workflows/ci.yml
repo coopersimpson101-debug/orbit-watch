@@ -1,0 +1,92 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-test-qemu:
+    name: firmware, host tests, QEMU mps2-an505 (Linux)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install toolchain, SKiDL and QEMU
+        run: |
+          python -m pip install --upgrade pip
+          pip install ziglang pytest pyelftools skidl matplotlib pillow
+          sudo apt-get update
+          sudo apt-get install -y qemu-system-arm
+          qemu-system-arm --version
+
+      - name: Build firmware (an505 + nrf54l15)
+        run: python build.py
+
+      - name: Filter coefficients up to date
+        run: python tools/design_filters.py --check
+
+      - name: Tests (C unit tests, benches, BIDMC, schematic checks, QEMU runs)
+        run: python -m pytest -v tests
+
+      - name: One-hour emulated runs, benchmarks and power model
+        run: python tools/collect_results.py
+
+      - name: Show the emulated statistics
+        run: |
+          for p in active lowpower fullrefresh; do echo "== $p"; grep -h "STATS" build/qemu/$p/uart.log; done
+          cat results/power_budget.csv
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: orbit-watch-ci
+          path: |
+            build/an505/orbit-watch.elf
+            build/nrf54l15/orbit-watch.elf
+            build/nrf54l15/orbit-watch.bin
+            build/qemu/*/uart.log
+            build/qemu/*/*.pbm
+            results/
+            hardware/out/
+
+  host-macos:
+    name: host tests + firmware build (macOS)
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install ziglang pytest pyelftools skidl
+      - run: python build.py
+      - name: Tests (QEMU tests are skipped here)
+        run: python -m pytest -v tests
+
+  kicad:
+    name: netlist vs official KiCad libraries (kicad/kicad container)
+    runs-on: ubuntu-24.04
+    # New job: it has not run yet. Kept non-blocking until it has passed once.
+    continue-on-error: true
+    container:
+      image: kicad/kicad:9.0
+      options: --user root
+    steps:
+      - uses: actions/checkout@v4
+      - name: KiCad version
+        run: kicad-cli version
+      - name: Install SKiDL
+        run: |
+          python3 -m pip --version || (apt-get update && apt-get install -y python3-pip)
+          python3 -m pip install --break-system-packages skidl
+      - name: Generate netlist, ERC, design checks
+        run: python3 hardware/schematic/orbit_watch.py
+      - name: Footprints and pads exist in the installed KiCad library
+        run: python3 tools/fetch_kicad_pads.py --lib-dir /usr/share/kicad/footprints --check
+      - name: Every netlist pin lands on a pad (pcbnew.FootprintLoad)
+        run: python3 tools/kicad_netlist_check.py --fp-dir /usr/share/kicad/footprints

@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "orbit-watch: a smartwatch OS and board design for the nRF54L15"
+abstract: "A Cortex-M33 kernel derived from orbit-os with tickless idle, deep-sleep power states and memory-LCD partial refresh, a watchface with integer step counting and PPG heart rate, and a SKiDL schematic of an nRF54L15 / nPM1300 / BMI270 / MAX30101 / Sharp memory-LCD watch board."
+authors:
+  - name: "the orbit-watch authors"
+version: 0.1.0
+date-released: "2026-11-26"
+license: MIT
+repository-code: "https://github.com/coopersimpson101-debug/orbit-watch"
+keywords:
+  - smartwatch
+  - rtos
+  - cortex-m33
+  - nrf54l15
+  - low-power
+  - memory-lcd
+  - kicad
+  - skidl

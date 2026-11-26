@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="350" viewBox="0 0 980 350">
+<rect width="980" height="350" rx="10" fill="#0d1117" stroke="#30363d"/>
+<circle cx="20" cy="18" r="6" fill="#ff5f56"/><circle cx="40" cy="18" r="6" fill="#ffbd2e"/><circle cx="60" cy="18" r="6" fill="#27c93f"/>
+<text x="490" y="22" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8b949e">qemu-system-arm -M mps2-an505 (emulated) - after `run 3600`</text>
+<text x="16" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#e6edf3" xml:space="preserve">orbit-watch 0.1.0 on qemu-mps2-an505 (Cortex-M33)</text>
+<text x="16" y="68" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#e6edf3" xml:space="preserve">clocks: cpu 20000000 Hz, lp counter 32000 Hz / 32 bit, tick 100 Hz</text>
+<text x="16" y="86" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#e6edf3" xml:space="preserve">mm: 229 KiB in 229 x 1024 B pages at 0x38005c00, buddy orders 0..7</text>
+<text x="16" y="104" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#4ADE80" xml:space="preserve">watch&gt; pm</text>
+<text x="16" y="122" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#e6edf3" xml:space="preserve">uptime 3601 s, wakeups 3604, locks 0x0, deep allowed</text>
+<text x="16" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#e6edf3" xml:space="preserve">  idle      entries        0  residency   0.00 %</text>
+<text x="16" y="158" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#e6edf3" xml:space="preserve">  tickless  entries      180  residency   4.99 %</text>
+<text x="16" y="176" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#e6edf3" xml:space="preserve">  deep      entries     3424  residency  94.98 %</text>
+<text x="16" y="194" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#e6edf3" xml:space="preserve">  active                        0.02 %</text>
+<text x="16" y="212" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#e6edf3" xml:space="preserve">tickless: 3604 sleeps, 360400 ticks planned, 360100 credited, 3 early, 0 late, 0 rejected</text>
+<text x="16" y="230" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#4ADE80" xml:space="preserve">watch&gt; ps</text>
+<text x="16" y="248" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#e6edf3" xml:space="preserve">  id name     prio state  switches  cpu%   stack used/size</text>
+<text x="16" y="266" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#e6edf3" xml:space="preserve">   0 idle        7 ready      3608    0.00    188/1024</text>
+<text x="16" y="284" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#e6edf3" xml:space="preserve">   1 shell       3 run          15    0.00    900/4096</text>
+<text x="16" y="302" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#e6edf3" xml:space="preserve">   2 ui          2 block      3602    0.01    396/2048</text>
+<text x="16" y="320" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#e6edf3" xml:space="preserve">   3 sensor      1 block      3602    0.00    212/4096</text>
+</svg>

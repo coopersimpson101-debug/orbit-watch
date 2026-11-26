@@ -1,0 +1,56 @@
+{
+ "stats": {
+  "uptime_s": 601,
+  "lp_hz": 32000,
+  "show_seconds": 1,
+  "full_refresh": 1,
+  "imu_batch_s": 1,
+  "ui_updates": 601,
+  "frames": 602,
+  "display_bytes": 2022864,
+  "display_rows": 101083,
+  "rows_skipped_same": 53,
+  "true_steps": 541,
+  "steps": 542,
+  "imu_wakes": 601,
+  "imu_samples": 15025,
+  "hr_bpm": 62,
+  "hr_sessions": 1,
+  "hr_locked": 1,
+  "ppg_wakes": 30,
+  "ppg_samples": 750,
+  "wakeups": 602,
+  "tickless_sleeps": 602,
+  "early_wakes": 1,
+  "lp_total": 19232023,
+  "lp_sleep": [
+   0,
+   959375,
+   18259749
+  ],
+  "pm_entries": [
+   0,
+   30,
+   572
+  ],
+  "threads": {
+   "idle": 15686,
+   "shell": 241,
+   "ui": 7604506,
+   "sensor": 440654
+  },
+  "cycles_hz": 20000000,
+  "emu_overhead_cycles": 6439849,
+  "sleep_cycles": 12011952532,
+  "time": "10:09:31"
+ },
+ "exit_code": 0,
+ "host_seconds": 2.05,
+ "commands": [
+  "face full on",
+  "run 600",
+  "stats",
+  "poweroff"
+ ],
+ "pm_output": ""
+}

@@ -1,0 +1,66 @@
+{
+ "bidmc_01_25hz": {
+  "samples": 2625,
+  "beats": 173,
+  "mean_ref_bpm": 92.05,
+  "mean_est_bpm": 93.08,
+  "mae_bpm": 1.679,
+  "coverage": 0.957
+ },
+ "bidmc_02_25hz": {
+  "samples": 2625,
+  "beats": 181,
+  "mean_ref_bpm": 90.72,
+  "mean_est_bpm": 90.82,
+  "mae_bpm": 0.567,
+  "coverage": 1.0
+ },
+ "bidmc_03_25hz": {
+  "samples": 2625,
+  "beats": 152,
+  "mean_ref_bpm": 76.36,
+  "mean_est_bpm": 76.37,
+  "mae_bpm": 0.409,
+  "coverage": 1.0
+ },
+ "bidmc_04_25hz": {
+  "samples": 2625,
+  "beats": 179,
+  "mean_ref_bpm": 93.99,
+  "mean_est_bpm": 93.99,
+  "mae_bpm": 0.301,
+  "coverage": 1.0
+ },
+ "bidmc_05_25hz": {
+  "samples": 2625,
+  "beats": 193,
+  "mean_ref_bpm": 97.91,
+  "mean_est_bpm": 97.89,
+  "mae_bpm": 0.454,
+  "coverage": 1.0
+ },
+ "bidmc_06_25hz": {
+  "samples": 2625,
+  "beats": 164,
+  "mean_ref_bpm": 81.85,
+  "mean_est_bpm": 81.79,
+  "mae_bpm": 0.252,
+  "coverage": 1.0
+ },
+ "bidmc_07_25hz": {
+  "samples": 2625,
+  "beats": 180,
+  "mean_ref_bpm": 90.04,
+  "mean_est_bpm": 89.99,
+  "mae_bpm": 0.051,
+  "coverage": 1.0
+ },
+ "bidmc_08_25hz": {
+  "samples": 2625,
+  "beats": 199,
+  "mean_ref_bpm": 100.4,
+  "mean_est_bpm": 100.01,
+  "mae_bpm": 0.395,
+  "coverage": 1.0
+ }
+}

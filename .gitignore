@@ -1,0 +1,12 @@
+build/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+*_sklib.py
+*.erc
+orbit_watch.log
+flash.jlink
+.DS_Store

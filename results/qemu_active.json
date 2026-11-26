@@ -1,0 +1,62 @@
+{
+ "stats": {
+  "uptime_s": 3601,
+  "lp_hz": 32000,
+  "show_seconds": 1,
+  "full_refresh": 0,
+  "imu_batch_s": 1,
+  "ui_updates": 3601,
+  "frames": 3602,
+  "display_bytes": 1441064,
+  "display_rows": 71693,
+  "rows_skipped_same": 41117,
+  "true_steps": 4229,
+  "steps": 4235,
+  "imu_wakes": 3601,
+  "imu_samples": 90025,
+  "hr_bpm": 92,
+  "hr_sessions": 6,
+  "hr_locked": 6,
+  "ppg_wakes": 180,
+  "ppg_samples": 4500,
+  "wakeups": 3603,
+  "tickless_sleeps": 3603,
+  "early_wakes": 2,
+  "lp_total": 115232005,
+  "lp_sleep": [
+   0,
+   5758473,
+   109448987
+  ],
+  "pm_entries": [
+   0,
+   180,
+   3423
+  ],
+  "threads": {
+   "idle": 93751,
+   "shell": 2913,
+   "ui": 12439502,
+   "sensor": 2828018
+  },
+  "cycles_hz": 20000000,
+  "emu_overhead_cycles": 6676039,
+  "sleep_cycles": 72004638428,
+  "time": "10:59:31"
+ },
+ "exit_code": 0,
+ "host_seconds": 3.5,
+ "commands": [
+  "info",
+  "ps",
+  "mem",
+  "snap boot",
+  "run 3600",
+  "snap face_1h",
+  "stats",
+  "pm",
+  "ps",
+  "poweroff"
+ ],
+ "pm_output": "pm\r\nuptime 3601 s, wakeups 3604, locks 0x0, deep allowed\r\n  idle      entries        0  residency   0.00 %\r\n  tickless  entries      180  residency   4.99 %\r\n  deep      entries     3424  residency  94.98 %\r\n  active                        0.02 %\r\ntickless: 3604 sleeps, 360400 ticks planned, 360100 credited, 3 early, 0 late, 0 rejected\r\nwatch> "
+}

@@ -1,0 +1,46 @@
+name: Bug report
+description: Something builds, runs or computes incorrectly
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you expected, and what you got instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Exact commands, starting from a clean checkout.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Full output / logs
+      render: text
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - kernel / scheduler
+        - tickless idle / power management
+        - display driver / watchface
+        - step counter
+        - heart rate
+        - QEMU AN505 board
+        - nRF54L15 board / hardware
+        - schematic / BOM / power model
+        - build / CI
+        - docs
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "QEMU version or board revision, zig version, host OS"
+    validations:
+      required: true

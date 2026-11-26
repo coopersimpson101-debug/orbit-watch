@@ -1,0 +1,63 @@
+name: release
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing tag to (re)build a release for"
+        required: true
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag || github.ref }}
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Toolchain, SKiDL, QEMU
+        run: |
+          pip install ziglang pytest pyelftools skidl
+          sudo apt-get update
+          sudo apt-get install -y qemu-system-arm zip
+      - run: python build.py
+      - run: python hardware/schematic/orbit_watch.py
+      - run: python tools/collect_results.py
+      - name: Package
+        run: |
+          mkdir -p dist
+          cp build/an505/orbit-watch.elf dist/orbit-watch-an505.elf
+          cp build/nrf54l15/orbit-watch.elf dist/orbit-watch-nrf54l15.elf
+          cp build/nrf54l15/orbit-watch.bin dist/orbit-watch-nrf54l15.bin
+          (cd hardware && zip -r ../dist/orbit-watch-hardware.zip out schematic power)
+          zip -r dist/orbit-watch-results.zip results
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-assets
+          path: dist/
+
+  publish:
+    needs: build
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag || github.ref }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-assets
+          path: dist
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.tag || github.ref_name }}
+          body_path: .github/release/${{ github.event.inputs.tag || github.ref_name }}.md
+          fail_on_unmatched_files: true
+          files: |
+            dist/orbit-watch-an505.elf
+            dist/orbit-watch-nrf54l15.elf
+            dist/orbit-watch-nrf54l15.bin
+            dist/orbit-watch-hardware.zip
+            dist/orbit-watch-results.zip

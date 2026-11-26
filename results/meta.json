@@ -1,0 +1,7 @@
+{
+ "date": "2026-11-26",
+ "machine": "Windows 10, AMD64, 12 logical CPUs",
+ "python": "3.12.10",
+ "zig": "0.17.1",
+ "qemu": "QEMU emulator version 11.1.3"
+}

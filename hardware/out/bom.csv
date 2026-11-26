@@ -1,0 +1,44 @@
+Refs,Qty,Value,Part,MPN,Manufacturer,Footprint,Datasheet,Pinmap,Note
+AE1,1,2450AT18A100,Antenna_2G4,2450AT18A100E,Johanson Technology,RF_Antenna:Johanson_2450AT18x100,https://www.johansontechnology.com/datasheets/2450AT18A100/2450AT18A100.pdf,kicad-fp,
+C1,1,4.7uF,C,GRM188R61E475KE11D,Murata,Capacitor_SMD:C_0603_1608Metric,https://www.murata.com/en-global/products/productdetail?partno=GRM188R61A106KE69%23,kicad-fp,VBUS input (rated 25 V)
+C2 C3 C4 C5 C6 C23,6,10uF,C,GRM188R61A106KE69D,Murata,Capacitor_SMD:C_0603_1608Metric,https://www.murata.com/en-global/products/productdetail?partno=GRM188R61A106KE69%23,kicad-fp,"BUCK1 output; BUCK2 output; MAX30101 VLED+ bulk; PVDD, place at pin 4"
+C7 C10 C11 C12 C13 C14 C20 C21 C22 C24,10,100nF,C,GRM155R71C104KA88D,Murata,Capacitor_SMD:C_0402_1005Metric,https://www.murata.com/en-global/products/capacitor/ceramiccapacitor,kicad-fp,"BMI270 VDD; BMI270 VDDIO; DECA (verify vs. reference circuitry config 1); DECD; MAX30101 VDD; MAX30101 VLED+; nPM1300 VDDIO; nRF54L15 VDD pins 10/22/36, one per pin"
+C8 C9,2,2.2uF,C,GRM155R61A225KE95D,Murata,Capacitor_SMD:C_0402_1005Metric,https://www.murata.com/en-global/products/capacitor/ceramiccapacitor,kicad-fp,nRF54L15 VDD bulk (ref. config 1 C1); nRF54L15 VDD bulk (ref. config 1 C2)
+C15,1,10nF,C,GRM155R71H103KA88D,Murata,Capacitor_SMD:C_0402_1005Metric,https://www.murata.com/en-global/products/capacitor/ceramiccapacitor,kicad-fp,"DECRF, place at pin 33"
+C16,1,DNP,C,GJM0335C1E1R5WB01,Murata,Capacitor_SMD:C_0201_0603Metric,https://www.murata.com/en-global/products/capacitor/ceramiccapacitor,kicad-fp,pi-match shunt 1 (do not populate)
+C17,1,1.5pF,C,GJM0335C1E1R5WB01,Murata,Capacitor_SMD:C_0201_0603Metric,https://www.murata.com/en-global/products/capacitor/ceramiccapacitor,kicad-fp,pi-match shunt 2
+C18 C19,2,1uF,C,GRM155R61A105KE15D,Murata,Capacitor_SMD:C_0402_1005Metric,https://www.murata.com/en-global/products/capacitor/ceramiccapacitor,kicad-fp,LCD VDD (datasheet remark 6-5); LCD VDDA
+D1,1,TPD1E10B06,TPD1E10B06,TPD1E10B06DPYR,TI,Diode_SMD:D_0402_1005Metric,https://www.ti.com/lit/ds/symlink/tpd1e10b06.pdf,kicad-fp,
+D2,1,red,LED_red,150040RS75000,Wurth,LED_SMD:LED_0402_1005Metric,https://www.we-online.com/catalog/datasheet/150040RS75000.pdf,kicad-fp,
+D3,1,1N4148WS,1N4148WS,1N4148WS,onsemi,Diode_SMD:D_SOD-323,https://www.onsemi.com/pdf/datasheet/1n4148ws-d.pdf,kicad-fp,
+J1,1,USB-C,USB_C_PowerOnly,USB4105-GF-A,GCT,Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal,https://gct.co/connector/usb4105,kicad-fp,
+J2,1,LiPo 3.7V,Battery_JST_SH2,SM02B-SRSS-TB(LF)(SN),JST,Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal,https://www.jst-mfg.com/product/pdf/eng/eSH.pdf,kicad-fp,
+J3,1,TC2030,SWD_TC2030,"TC2030-IDC-NL (cable, no part on board)",Tag-Connect,Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical,https://www.tag-connect.com/product/tc2030-idc-nl,memory,
+J4,1,LS013B7DH05,LS013B7DH05_FPC,FH12-10S-0.5SH(55) + LS013B7DH05,Hirose / Sharp,Connector_FFC-FPC:Hirose_FH12-10S-0.5SH_1x10-1MP_P0.50mm_Horizontal,https://www.hirose.com/product/series/FH12,datasheet,
+J5,1,ERM 308-100,Motor_JST_SH2,SM02B-SRSS-TB(LF)(SN) + Precision Microdrives 308-100,JST / Precision Microdrives,Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal,https://www.precisionmicrodrives.com/product/308-100-8mm-vibration-motor-3mm-type,kicad-fp,
+L1 L2,2,2.2uH,L,DFE201210U-2R2M,Murata,Inductor_SMD:L_0805_2012Metric,https://www.murata.com/en-global/products/inductor,kicad-fp,
+L3,1,4.7uH,L,DFE18SAN4R7MG0L,Murata,Inductor_SMD:L_0603_1608Metric,https://www.murata.com/en-global/products/inductor,kicad-fp,
+L4,1,2.7nH,L,LQP03HQ2N7B02,Murata,Inductor_SMD:L_0201_0603Metric,https://www.murata.com/en-global/products/inductor,kicad-fp,
+Q1,1,AO3400A,AO3400A,AO3400A,Alpha & Omega,Package_TO_SOT_SMD:SOT-23,https://www.aosmd.com/res/datasheets/AO3400A.pdf,memory,
+R1 R2,2,TBD,R,RC0402FR-07 (value TBD),Yageo,Resistor_SMD:R_0402_1005Metric,https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf,kicad-fp,BUCK1 = 3.0 V: value from the nPM1300 PS VSET table; BUCK2 = 1.8 V: value from the nPM1300 PS VSET table
+R3 R8,2,100k,R,RC0402FR-07100KL,Yageo,Resistor_SMD:R_0402_1005Metric,https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf,kicad-fp,SCS pull-down: panel deselected during reset; gate pull-down: motor off in reset
+R4 R5 R6,3,4.7k,R,RC0402FR-074K7L,Yageo,Resistor_SMD:R_0402_1005Metric,https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf,kicad-fp,I2C pull-up; open-drain INT pull-up (pin rated to 6 V)
+R7,1,100,R,RC0402FR-07100RL,Yageo,Resistor_SMD:R_0402_1005Metric,https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf,kicad-fp,gate resistor
+RT1,1,10k NTC,NTC_10k,NCP15XH103F03RC,Murata,Resistor_SMD:R_0402_1005Metric,https://www.murata.com/en-global/products/productdetail?partno=NCP15XH103F03RC,kicad-fp,
+SW1,1,PWR,SW_Push,EVQ-P7A01P,Panasonic,Button_Switch_SMD:SW_SPST_EVQP7A,https://industrial.panasonic.com/cdbs/www-data/pdf/ATK0000/ATK0000CE28.pdf,kicad-fp,
+SW2,1,BTN1,SW_Push,EVQ-P7A01P,Panasonic,Button_Switch_SMD:SW_SPST_EVQP7A,https://industrial.panasonic.com/cdbs/www-data/pdf/ATK0000/ATK0000CE28.pdf,kicad-fp,
+SW3,1,BTN2,SW_Push,EVQ-P7A01P,Panasonic,Button_Switch_SMD:SW_SPST_EVQP7A,https://industrial.panasonic.com/cdbs/www-data/pdf/ATK0000/ATK0000CE28.pdf,kicad-fp,
+SW4,1,BTN3,SW_Push,EVQ-P7A01P,Panasonic,Button_Switch_SMD:SW_SPST_EVQP7A,https://industrial.panasonic.com/cdbs/www-data/pdf/ATK0000/ATK0000CE28.pdf,kicad-fp,
+TP1,1,UART_TX,TestPad,(copper pad),-,TestPoint:TestPoint_Pad_1.0x1.0mm,-,kicad-fp,
+TP2,1,UART_RX,TestPad,(copper pad),-,TestPoint:TestPoint_Pad_1.0x1.0mm,-,kicad-fp,
+TP3,1,VBAT,TestPad,(copper pad),-,TestPoint:TestPoint_Pad_1.0x1.0mm,-,kicad-fp,
+TP4,1,VSYS,TestPad,(copper pad),-,TestPoint:TestPoint_Pad_1.0x1.0mm,-,kicad-fp,
+TP5,1,VDD_3V0,TestPad,(copper pad),-,TestPoint:TestPoint_Pad_1.0x1.0mm,-,kicad-fp,
+TP6,1,VDD_1V8,TestPad,(copper pad),-,TestPoint:TestPoint_Pad_1.0x1.0mm,-,kicad-fp,
+TP7,1,GND,TestPad,(copper pad),-,TestPoint:TestPoint_Pad_1.0x1.0mm,-,kicad-fp,
+U1,1,nPM1300,nPM1300-QEAA,NPM1300-QEAA-R7,Nordic Semiconductor,Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm,https://docs.nordicsemi.com/bundle/ps_npm1300/page/pin.html,datasheet,
+U2,1,nRF54L15,nRF54L15-QFAA,NRF54L15-QFAA-R,Nordic Semiconductor,Package_DFN_QFN:QFN-48-1EP_6x6mm_P0.4mm_EP4.6x4.6mm,https://docs.nordicsemi.com/bundle/ps_nrf54l15/page/chapters/pin.html,datasheet,
+U3,1,BMI270,BMI270,BMI270,Bosch Sensortec,Package_LGA:Bosch_LGA-14_3x2.5mm_P0.5mm,https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmi270-ds000.pdf,datasheet,
+U4,1,MAX30101,MAX30101,MAX30101EFD+T,Analog Devices (Maxim),OptoDevice:Maxim_OLGA-14_3.3x5.6mm_P0.8mm,https://www.analog.com/media/en/technical-documentation/data-sheets/MAX30101.pdf,datasheet,
+Y1,1,32MHz,XTAL_32MHz,XRCGB32M000F1H00R0,Murata,Crystal:Crystal_SMD_2016-4Pin_2.0x1.6mm,https://www.murata.com/en-global/products/timingdevice,kicad-fp,
+Y2,1,32.768kHz,XTAL_32k768,ABS06-32.768KHZ-T,Abracon,Crystal:Crystal_SMD_2012-2Pin_2.0x1.2mm,https://abracon.com/Resonators/abs06.pdf,kicad-fp,

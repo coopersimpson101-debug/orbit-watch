@@ -1,0 +1,68 @@
+[
+ {
+  "strategy": "full",
+  "seconds": 1,
+  "updates": 3600,
+  "frames": 3600,
+  "bytes_per_hour": 12103200,
+  "bytes_per_minute": 201720.0,
+  "rows_per_update": 168.0,
+  "spi_ms_per_hour_at_1MHz": 96825.6,
+  "mismatched_frames": 0
+ },
+ {
+  "strategy": "dirty",
+  "seconds": 1,
+  "updates": 3600,
+  "frames": 3600,
+  "bytes_per_hour": 2934840,
+  "bytes_per_minute": 48914.0,
+  "rows_per_update": 40.66,
+  "spi_ms_per_hour_at_1MHz": 23478.7,
+  "mismatched_frames": 0
+ },
+ {
+  "strategy": "partial",
+  "seconds": 1,
+  "updates": 3600,
+  "frames": 3600,
+  "bytes_per_hour": 1726700,
+  "bytes_per_minute": 28778.3,
+  "rows_per_update": 23.88,
+  "spi_ms_per_hour_at_1MHz": 13813.6,
+  "mismatched_frames": 0
+ },
+ {
+  "strategy": "full",
+  "seconds": 0,
+  "updates": 60,
+  "frames": 60,
+  "bytes_per_hour": 201720,
+  "bytes_per_minute": 3362.0,
+  "rows_per_update": 168.0,
+  "spi_ms_per_hour_at_1MHz": 1613.8,
+  "mismatched_frames": 0
+ },
+ {
+  "strategy": "dirty",
+  "seconds": 0,
+  "updates": 60,
+  "frames": 60,
+  "bytes_per_hour": 101720,
+  "bytes_per_minute": 1695.3,
+  "rows_per_update": 84.67,
+  "spi_ms_per_hour_at_1MHz": 813.8,
+  "mismatched_frames": 0
+ },
+ {
+  "strategy": "partial",
+  "seconds": 0,
+  "updates": 60,
+  "frames": 60,
+  "bytes_per_hour": 67720,
+  "bytes_per_minute": 1128.7,
+  "rows_per_update": 56.33,
+  "spi_ms_per_hour_at_1MHz": 541.8,
+  "mismatched_frames": 0
+ }
+]

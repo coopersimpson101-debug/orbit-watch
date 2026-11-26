@@ -1,0 +1,3473 @@
+(export 
+  (version "D")
+  (design
+    (source "orbit_watch.py")
+    (date "11/26/2026 03:06 PM")
+    (tool "SKiDL (3.0.0)")
+    (sheet
+      (number 1)
+      (name "/")
+      (tstamps "/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "..\..\orbit_watch.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value "")))))
+  (components
+    (comp
+      (ref "AE1")
+      (value "2450AT18A100")
+      (description "")
+      (footprint "RF_Antenna:Johanson_2450AT18x100")
+      (fields
+        (field
+          (name "MPN") "2450AT18A100E")
+        (field
+          (name "Manufacturer") "Johanson Technology")
+        (field
+          (name "Datasheet") "https://www.johansontechnology.com/datasheets/2450AT18A100/2450AT18A100.pdf")
+        (field
+          (name "Description") "2.4 GHz chip antenna")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "RF_Antenna:Johanson_2450AT18x100")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "7s6kPzqOjq")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:209"))
+      (libsource
+        (lib "NO_LIB")
+        (part "Antenna_2G4"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "dc97dcce-6b85-52d2-8842-e6d522b23a27"))
+    (comp
+      (ref "C1")
+      (value "4.7uF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (fields
+        (field
+          (name "MPN") "GRM188R61E475KE11D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/productdetail?partno=GRM188R61A106KE69%23")
+        (field
+          (name "Description") "MLCC 10 uF 10 V X5R 0603")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "VBUS input (rated 25 V)")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "qIXi_RKvo6")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "f97592fd-c4a3-547a-8da3-e75b26f5a61d"))
+    (comp
+      (ref "C10")
+      (value "100nF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "GRM155R71C104KA88D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor")
+        (field
+          (name "Description") "MLCC 0402")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "nRF54L15 VDD pins 10/22/36, one per pin")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "DtHCBFrazf")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "0726d112-ac87-5d1e-8a55-08da90bc6b38"))
+    (comp
+      (ref "C11")
+      (value "100nF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "GRM155R71C104KA88D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor")
+        (field
+          (name "Description") "MLCC 0402")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "nRF54L15 VDD pins 10/22/36, one per pin")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "E32_YbCRyw")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "45af8fd9-a1b4-5ee3-9a87-c514d8835dbe"))
+    (comp
+      (ref "C12")
+      (value "100nF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "GRM155R71C104KA88D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor")
+        (field
+          (name "Description") "MLCC 0402")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "nRF54L15 VDD pins 10/22/36, one per pin")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "RxbgpjBmS2")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "8ac7c036-d34a-590b-b59a-6b421b74314b"))
+    (comp
+      (ref "C13")
+      (value "100nF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "GRM155R71C104KA88D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor")
+        (field
+          (name "Description") "MLCC 0402")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "DECA (verify vs. reference circuitry config 1)")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "Qlcvnetqpo")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "bb23177d-5ae4-5fa5-98b0-bbf3488848fd"))
+    (comp
+      (ref "C14")
+      (value "100nF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "GRM155R71C104KA88D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor")
+        (field
+          (name "Description") "MLCC 0402")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "DECD")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "AyYcMkOguY")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "961c9d56-6333-50a8-9ce3-cbe989c9e3c9"))
+    (comp
+      (ref "C15")
+      (value "10nF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "GRM155R71H103KA88D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor")
+        (field
+          (name "Description") "MLCC 0402")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "DECRF, place at pin 33")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "xygWbaMTD_")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "380394b7-9bd7-50bc-883e-b233a586ae59"))
+    (comp
+      (ref "C16")
+      (value "DNP")
+      (description "")
+      (footprint "Capacitor_SMD:C_0201_0603Metric")
+      (fields
+        (field
+          (name "MPN") "GJM0335C1E1R5WB01")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor")
+        (field
+          (name "Description") "RF MLCC 0201 (antenna match)")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "pi-match shunt 1 (do not populate)")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0201_0603Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "SKerIHmNN2")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "9e460ec4-494e-575c-9857-317a58057203"))
+    (comp
+      (ref "C17")
+      (value "1.5pF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0201_0603Metric")
+      (fields
+        (field
+          (name "MPN") "GJM0335C1E1R5WB01")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor")
+        (field
+          (name "Description") "RF MLCC 0201 (antenna match)")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "pi-match shunt 2")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0201_0603Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "zxK2oEY5R1")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "5ab5de17-4839-5357-a8a9-85a507e3cbc8"))
+    (comp
+      (ref "C18")
+      (value "1uF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "GRM155R61A105KE15D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor")
+        (field
+          (name "Description") "MLCC 0402")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "LCD VDD (datasheet remark 6-5)")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "Ug8YWZ8D6l")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "c5d44c3a-770b-5e36-b275-f8c96762fc4d"))
+    (comp
+      (ref "C19")
+      (value "1uF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "GRM155R61A105KE15D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor")
+        (field
+          (name "Description") "MLCC 0402")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "LCD VDDA")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "ePQzJbBKoZ")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "329e2f54-89ac-5748-a3c8-80d7fbd8a043"))
+    (comp
+      (ref "C2")
+      (value "10uF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (fields
+        (field
+          (name "MPN") "GRM188R61A106KE69D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/productdetail?partno=GRM188R61A106KE69%23")
+        (field
+          (name "Description") "MLCC 10 uF 10 V X5R 0603")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "qHBqZwutOo")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "13b5596e-23c9-53c7-b1cd-60d4d86fad50"))
+    (comp
+      (ref "C20")
+      (value "100nF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "GRM155R71C104KA88D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor")
+        (field
+          (name "Description") "MLCC 0402")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "BMI270 VDD")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "g5lfW3J7HP")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "ab79cbf9-25f8-5e52-bd6d-70ab6a468a5f"))
+    (comp
+      (ref "C21")
+      (value "100nF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "GRM155R71C104KA88D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor")
+        (field
+          (name "Description") "MLCC 0402")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "BMI270 VDDIO")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "2nIoZ6jtp_")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "445587ef-1f75-53da-a6ab-63634a47405d"))
+    (comp
+      (ref "C22")
+      (value "100nF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "GRM155R71C104KA88D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor")
+        (field
+          (name "Description") "MLCC 0402")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "MAX30101 VDD")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "0f2AZBUCO5")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "1dc62863-5f4b-5b96-96d3-ed6b741fb205"))
+    (comp
+      (ref "C23")
+      (value "10uF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (fields
+        (field
+          (name "MPN") "GRM188R61A106KE69D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/productdetail?partno=GRM188R61A106KE69%23")
+        (field
+          (name "Description") "MLCC 10 uF 10 V X5R 0603")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "MAX30101 VLED+ bulk")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "FKeTX9yqoi")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "4691a42b-8f00-599c-87a3-dad22a1ca817"))
+    (comp
+      (ref "C24")
+      (value "100nF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "GRM155R71C104KA88D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor")
+        (field
+          (name "Description") "MLCC 0402")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "MAX30101 VLED+")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "WfaCGmn76O")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "890a9c36-3ac9-5030-874f-f28fbd1a31d7"))
+    (comp
+      (ref "C3")
+      (value "10uF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (fields
+        (field
+          (name "MPN") "GRM188R61A106KE69D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/productdetail?partno=GRM188R61A106KE69%23")
+        (field
+          (name "Description") "MLCC 10 uF 10 V X5R 0603")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "2_ZxFYup5f")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "3827057d-a9a5-5837-811d-33d73be220ba"))
+    (comp
+      (ref "C4")
+      (value "10uF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (fields
+        (field
+          (name "MPN") "GRM188R61A106KE69D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/productdetail?partno=GRM188R61A106KE69%23")
+        (field
+          (name "Description") "MLCC 10 uF 10 V X5R 0603")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "PVDD, place at pin 4")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "dW0oL9GfOc")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "618e1dbf-59bf-5e1b-8201-baf9f21893a5"))
+    (comp
+      (ref "C5")
+      (value "10uF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (fields
+        (field
+          (name "MPN") "GRM188R61A106KE69D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/productdetail?partno=GRM188R61A106KE69%23")
+        (field
+          (name "Description") "MLCC 10 uF 10 V X5R 0603")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "BUCK1 output")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "sSRhByNH2_")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "97a297c9-4c7c-50ec-95f0-be9b16730a3e"))
+    (comp
+      (ref "C6")
+      (value "10uF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (fields
+        (field
+          (name "MPN") "GRM188R61A106KE69D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/productdetail?partno=GRM188R61A106KE69%23")
+        (field
+          (name "Description") "MLCC 10 uF 10 V X5R 0603")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "BUCK2 output")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "MDLSWuHeIG")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "0e0926ab-78ce-5728-880d-0d681515ee1d"))
+    (comp
+      (ref "C7")
+      (value "100nF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "GRM155R71C104KA88D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor")
+        (field
+          (name "Description") "MLCC 0402")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "nPM1300 VDDIO")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "p8aYrb7Cov")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "6f8dfccf-040c-53e2-bc39-ac0e5826a35e"))
+    (comp
+      (ref "C8")
+      (value "2.2uF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "GRM155R61A225KE95D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor")
+        (field
+          (name "Description") "MLCC 0402")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "nRF54L15 VDD bulk (ref. config 1 C1)")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "OoAOer3vbc")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "21741d44-02ba-58e5-b5a0-8aaa2a6ed749"))
+    (comp
+      (ref "C9")
+      (value "2.2uF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "GRM155R61A225KE95D")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor")
+        (field
+          (name "Description") "MLCC 0402")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "nRF54L15 VDD bulk (ref. config 1 C2)")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "SJT3xZBu3i")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:61"))
+      (libsource
+        (lib "NO_LIB")
+        (part "C"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "1b7607df-8f1a-5309-9465-2f5127692bbb"))
+    (comp
+      (ref "D1")
+      (value "TPD1E10B06")
+      (description "")
+      (footprint "Diode_SMD:D_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "TPD1E10B06DPYR")
+        (field
+          (name "Manufacturer") "TI")
+        (field
+          (name "Datasheet") "https://www.ti.com/lit/ds/symlink/tpd1e10b06.pdf")
+        (field
+          (name "Description") "ESD protection on VBUS")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Diode_SMD:D_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "djaHyNi368")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:101"))
+      (libsource
+        (lib "NO_LIB")
+        (part "TPD1E10B06"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "a1e5a24b-5c1f-5bae-b4e0-b351adb70f7f"))
+    (comp
+      (ref "D2")
+      (value "red")
+      (description "")
+      (footprint "LED_SMD:LED_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "150040RS75000")
+        (field
+          (name "Manufacturer") "Wurth")
+        (field
+          (name "Datasheet") "https://www.we-online.com/catalog/datasheet/150040RS75000.pdf")
+        (field
+          (name "Description") "charge indicator LED (driven by nPM1300 LED0 sink)")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "LED_SMD:LED_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "SfawuwL0jD")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:155"))
+      (libsource
+        (lib "NO_LIB")
+        (part "LED_red"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "41864d34-d85c-5cf0-9fa3-3df65fe8e7cb"))
+    (comp
+      (ref "D3")
+      (value "1N4148WS")
+      (description "")
+      (footprint "Diode_SMD:D_SOD-323")
+      (fields
+        (field
+          (name "MPN") "1N4148WS")
+        (field
+          (name "Manufacturer") "onsemi")
+        (field
+          (name "Datasheet") "https://www.onsemi.com/pdf/datasheet/1n4148ws-d.pdf")
+        (field
+          (name "Description") "flyback diode across the motor")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Diode_SMD:D_SOD-323")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "BWzf6fO09s")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:309"))
+      (libsource
+        (lib "NO_LIB")
+        (part "1N4148WS"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "f85d0c8b-c44f-537c-a20a-b1dd7efb6e35"))
+    (comp
+      (ref "J1")
+      (value "USB-C")
+      (description "")
+      (footprint "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal")
+      (fields
+        (field
+          (name "MPN") "USB4105-GF-A")
+        (field
+          (name "Manufacturer") "GCT")
+        (field
+          (name "Datasheet") "https://gct.co/connector/usb4105")
+        (field
+          (name "Description") "USB-C receptacle (charging only on rev A)")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "2xawaDrO86")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:93"))
+      (libsource
+        (lib "NO_LIB")
+        (part "USB_C_PowerOnly"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "88197b85-afac-5487-828d-06f9707cdd7f"))
+    (comp
+      (ref "J2")
+      (value "LiPo 3.7V")
+      (description "")
+      (footprint "Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "SM02B-SRSS-TB(LF)(SN)")
+        (field
+          (name "Manufacturer") "JST")
+        (field
+          (name "Datasheet") "https://www.jst-mfg.com/product/pdf/eng/eSH.pdf")
+        (field
+          (name "Description") "LiPo connector (cell: 3.7 V ~200 mAh, e.g. 402030 size, with PCM)")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "rbn15gYmkP")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:108"))
+      (libsource
+        (lib "NO_LIB")
+        (part "Battery_JST_SH2"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "791eb1aa-1234-5b05-bf37-245f5083d183"))
+    (comp
+      (ref "J3")
+      (value "TC2030")
+      (description "")
+      (footprint "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical")
+      (fields
+        (field
+          (name "MPN") "TC2030-IDC-NL (cable, no part on board)")
+        (field
+          (name "Manufacturer") "Tag-Connect")
+        (field
+          (name "Datasheet") "https://www.tag-connect.com/product/tc2030-idc-nl")
+        (field
+          (name "Description") "SWD programming footprint (ARM 10-pin cable mapping)")
+        (field
+          (name "Pinmap") "memory")
+        (field
+          (name "PinmapRef") "TC2030 Cortex pin-out from memory: verify against the cable adapter")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "lXL4Usr0ce")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:213"))
+      (libsource
+        (lib "NO_LIB")
+        (part "SWD_TC2030"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "1cd67d8e-319a-5d6f-b37e-34b983c5025c"))
+    (comp
+      (ref "J4")
+      (value "LS013B7DH05")
+      (description "")
+      (footprint "Connector_FFC-FPC:Hirose_FH12-10S-0.5SH_1x10-1MP_P0.50mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "FH12-10S-0.5SH(55) + LS013B7DH05")
+        (field
+          (name "Manufacturer") "Hirose / Sharp")
+        (field
+          (name "Datasheet") "https://www.hirose.com/product/series/FH12")
+        (field
+          (name "Description") "FPC connector for the Sharp LS013B7DH05 memory-in-pixel LCD")
+        (field
+          (name "Pinmap") "datasheet")
+        (field
+          (name "PinmapRef") "Sharp LD-26912A table 4-1 (panel terminals 1-10); connector contact side vs. FPC orientation: verify")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Connector_FFC-FPC:Hirose_FH12-10S-0.5SH_1x10-1MP_P0.50mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "HakuWYzCF1")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:223"))
+      (libsource
+        (lib "NO_LIB")
+        (part "LS013B7DH05_FPC"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "c8b291de-4dca-5db4-9322-4c9ea9c08f1d"))
+    (comp
+      (ref "J5")
+      (value "ERM 308-100")
+      (description "")
+      (footprint "Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "SM02B-SRSS-TB(LF)(SN) + Precision Microdrives 308-100")
+        (field
+          (name "Manufacturer") "JST / Precision Microdrives")
+        (field
+          (name "Datasheet") "https://www.precisionmicrodrives.com/product/308-100-8mm-vibration-motor-3mm-type")
+        (field
+          (name "Description") "8 mm coin ERM vibration motor (3 V) on a connector")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "Pl4bRLwgay")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:305"))
+      (libsource
+        (lib "NO_LIB")
+        (part "Motor_JST_SH2"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "bc3ad26a-87b4-5f8e-b699-456c60b501ee"))
+    (comp
+      (ref "L1")
+      (value "2.2uH")
+      (description "")
+      (footprint "Inductor_SMD:L_0805_2012Metric")
+      (fields
+        (field
+          (name "MPN") "DFE201210U-2R2M")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/inductor")
+        (field
+          (name "Description") "power inductor 2.2 uH 0805 (nPM1300 buck)")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Inductor_SMD:L_0805_2012Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "0we589JIO5")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:126"))
+      (libsource
+        (lib "NO_LIB")
+        (part "L"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "7690b96a-f645-522f-89ad-40339e3c6a29"))
+    (comp
+      (ref "L2")
+      (value "2.2uH")
+      (description "")
+      (footprint "Inductor_SMD:L_0805_2012Metric")
+      (fields
+        (field
+          (name "MPN") "DFE201210U-2R2M")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/inductor")
+        (field
+          (name "Description") "power inductor 2.2 uH 0805 (nPM1300 buck)")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Inductor_SMD:L_0805_2012Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "XNK7HulgwN")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:129"))
+      (libsource
+        (lib "NO_LIB")
+        (part "L"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "1b5f28aa-4211-5e0b-86ee-2da0ceeb956f"))
+    (comp
+      (ref "L3")
+      (value "4.7uH")
+      (description "")
+      (footprint "Inductor_SMD:L_0603_1608Metric")
+      (fields
+        (field
+          (name "MPN") "DFE18SAN4R7MG0L")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/inductor")
+        (field
+          (name "Description") "power inductor 4.7 uH 0603 (nRF54L15 DC/DC)")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Inductor_SMD:L_0603_1608Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "WxxAApyphN")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:183"))
+      (libsource
+        (lib "NO_LIB")
+        (part "L"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "637a7a3e-8c8f-5feb-949d-0a33fa2b0fc7"))
+    (comp
+      (ref "L4")
+      (value "2.7nH")
+      (description "")
+      (footprint "Inductor_SMD:L_0201_0603Metric")
+      (fields
+        (field
+          (name "MPN") "LQP03HQ2N7B02")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/inductor")
+        (field
+          (name "Description") "RF inductor 0201 (antenna match)")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Inductor_SMD:L_0201_0603Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "eKuaHxNCYE")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:205"))
+      (libsource
+        (lib "NO_LIB")
+        (part "L"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "fc6d0f2a-4bab-599a-a324-b602006bd1aa"))
+    (comp
+      (ref "Q1")
+      (value "AO3400A")
+      (description "")
+      (footprint "Package_TO_SOT_SMD:SOT-23")
+      (fields
+        (field
+          (name "MPN") "AO3400A")
+        (field
+          (name "Manufacturer") "Alpha & Omega")
+        (field
+          (name "Datasheet") "https://www.aosmd.com/res/datasheets/AO3400A.pdf")
+        (field
+          (name "Description") "N-MOSFET 30 V 5.7 A, motor driver")
+        (field
+          (name "Pinmap") "memory")
+        (field
+          (name "PinmapRef") "SOT-23 G/S/D = 1/2/3 from memory: verify")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Package_TO_SOT_SMD:SOT-23")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "jRKHEjzy5e")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:301"))
+      (libsource
+        (lib "NO_LIB")
+        (part "AO3400A"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "12f17eac-dcbf-5442-a138-90754ece836e"))
+    (comp
+      (ref "R1")
+      (value "TBD")
+      (description "")
+      (footprint "Resistor_SMD:R_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "RC0402FR-07 (value TBD)")
+        (field
+          (name "Manufacturer") "Yageo")
+        (field
+          (name "Datasheet") "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf")
+        (field
+          (name "Description") "resistor 0402 1 %")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "BUCK1 = 3.0 V: value from the nPM1300 PS VSET table")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "al6A9RZsuR")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:73"))
+      (libsource
+        (lib "NO_LIB")
+        (part "R"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "1b6e1a6c-574a-5bbb-9dce-b9024cb09566"))
+    (comp
+      (ref "R2")
+      (value "TBD")
+      (description "")
+      (footprint "Resistor_SMD:R_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "RC0402FR-07 (value TBD)")
+        (field
+          (name "Manufacturer") "Yageo")
+        (field
+          (name "Datasheet") "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf")
+        (field
+          (name "Description") "resistor 0402 1 %")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "BUCK2 = 1.8 V: value from the nPM1300 PS VSET table")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "PdP6a52Bvw")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:73"))
+      (libsource
+        (lib "NO_LIB")
+        (part "R"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "a60e5a8e-4a26-52a3-9994-7cdcc83a9216"))
+    (comp
+      (ref "R3")
+      (value "100k")
+      (description "")
+      (footprint "Resistor_SMD:R_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "RC0402FR-07100KL")
+        (field
+          (name "Manufacturer") "Yageo")
+        (field
+          (name "Datasheet") "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf")
+        (field
+          (name "Description") "resistor 0402 1 %")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "SCS pull-down: panel deselected during reset")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "vPJg1vYP6N")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:73"))
+      (libsource
+        (lib "NO_LIB")
+        (part "R"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "8dc9c5ff-dfa0-555a-8631-4a84687457b5"))
+    (comp
+      (ref "R4")
+      (value "4.7k")
+      (description "")
+      (footprint "Resistor_SMD:R_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "RC0402FR-074K7L")
+        (field
+          (name "Manufacturer") "Yageo")
+        (field
+          (name "Datasheet") "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf")
+        (field
+          (name "Description") "resistor 0402 1 %")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "I2C pull-up")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "KzieRR83qO")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:73"))
+      (libsource
+        (lib "NO_LIB")
+        (part "R"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "795ecf8c-6ce4-5b71-9983-dd2d8ba97993"))
+    (comp
+      (ref "R5")
+      (value "4.7k")
+      (description "")
+      (footprint "Resistor_SMD:R_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "RC0402FR-074K7L")
+        (field
+          (name "Manufacturer") "Yageo")
+        (field
+          (name "Datasheet") "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf")
+        (field
+          (name "Description") "resistor 0402 1 %")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "I2C pull-up")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "2Erky7NKVA")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:73"))
+      (libsource
+        (lib "NO_LIB")
+        (part "R"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "399edad8-4f23-52e1-855e-f382d77166e8"))
+    (comp
+      (ref "R6")
+      (value "4.7k")
+      (description "")
+      (footprint "Resistor_SMD:R_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "RC0402FR-074K7L")
+        (field
+          (name "Manufacturer") "Yageo")
+        (field
+          (name "Datasheet") "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf")
+        (field
+          (name "Description") "resistor 0402 1 %")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "open-drain INT pull-up (pin rated to 6 V)")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "jp7l3LNnoP")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:73"))
+      (libsource
+        (lib "NO_LIB")
+        (part "R"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "79640472-3089-5b20-8dfb-9f1b809f2ae9"))
+    (comp
+      (ref "R7")
+      (value "100")
+      (description "")
+      (footprint "Resistor_SMD:R_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "RC0402FR-07100RL")
+        (field
+          (name "Manufacturer") "Yageo")
+        (field
+          (name "Datasheet") "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf")
+        (field
+          (name "Description") "resistor 0402 1 %")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "gate resistor")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "eL0uMCSXnG")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:73"))
+      (libsource
+        (lib "NO_LIB")
+        (part "R"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "1b9bda27-5331-5839-aab4-f4f583b9d4aa"))
+    (comp
+      (ref "R8")
+      (value "100k")
+      (description "")
+      (footprint "Resistor_SMD:R_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "RC0402FR-07100KL")
+        (field
+          (name "Manufacturer") "Yageo")
+        (field
+          (name "Datasheet") "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf")
+        (field
+          (name "Description") "resistor 0402 1 %")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Note") "gate pull-down: motor off in reset")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "BvD5fknodl")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:73"))
+      (libsource
+        (lib "NO_LIB")
+        (part "R"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "af37e51a-4f42-579a-93f1-f42e8e7671bc"))
+    (comp
+      (ref "RT1")
+      (value "10k NTC")
+      (description "")
+      (footprint "Resistor_SMD:R_0402_1005Metric")
+      (fields
+        (field
+          (name "MPN") "NCP15XH103F03RC")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/productdetail?partno=NCP15XH103F03RC")
+        (field
+          (name "Description") "10 k B3380 NTC for the charger (move onto the cell if possible)")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "xYKzbaXR2k")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:114"))
+      (libsource
+        (lib "NO_LIB")
+        (part "NTC_10k"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "aafb2a1f-32f9-5b4b-8ad6-760ab15ddc4e"))
+    (comp
+      (ref "SW1")
+      (value "PWR")
+      (description "")
+      (footprint "Button_Switch_SMD:SW_SPST_EVQP7A")
+      (fields
+        (field
+          (name "MPN") "EVQ-P7A01P")
+        (field
+          (name "Manufacturer") "Panasonic")
+        (field
+          (name "Datasheet") "https://industrial.panasonic.com/cdbs/www-data/pdf/ATK0000/ATK0000CE28.pdf")
+        (field
+          (name "Description") "side-actuated tact switch")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Button_Switch_SMD:SW_SPST_EVQP7A")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "2Tu2QK6Ytp")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:163"))
+      (libsource
+        (lib "NO_LIB")
+        (part "SW_Push"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "900fb780-e254-5464-b746-6d485d71ff57"))
+    (comp
+      (ref "SW2")
+      (value "BTN1")
+      (description "")
+      (footprint "Button_Switch_SMD:SW_SPST_EVQP7A")
+      (fields
+        (field
+          (name "MPN") "EVQ-P7A01P")
+        (field
+          (name "Manufacturer") "Panasonic")
+        (field
+          (name "Datasheet") "https://industrial.panasonic.com/cdbs/www-data/pdf/ATK0000/ATK0000CE28.pdf")
+        (field
+          (name "Description") "side-actuated tact switch")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Button_Switch_SMD:SW_SPST_EVQP7A")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "sLqj34NOE6")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:291"))
+      (libsource
+        (lib "NO_LIB")
+        (part "SW_Push"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "a6c0ade3-9c92-5936-af20-2c201ca4407b"))
+    (comp
+      (ref "SW3")
+      (value "BTN2")
+      (description "")
+      (footprint "Button_Switch_SMD:SW_SPST_EVQP7A")
+      (fields
+        (field
+          (name "MPN") "EVQ-P7A01P")
+        (field
+          (name "Manufacturer") "Panasonic")
+        (field
+          (name "Datasheet") "https://industrial.panasonic.com/cdbs/www-data/pdf/ATK0000/ATK0000CE28.pdf")
+        (field
+          (name "Description") "side-actuated tact switch")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Button_Switch_SMD:SW_SPST_EVQP7A")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "NGB0vGZR48")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:291"))
+      (libsource
+        (lib "NO_LIB")
+        (part "SW_Push"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "454891db-3790-565b-82c0-84083c51e621"))
+    (comp
+      (ref "SW4")
+      (value "BTN3")
+      (description "")
+      (footprint "Button_Switch_SMD:SW_SPST_EVQP7A")
+      (fields
+        (field
+          (name "MPN") "EVQ-P7A01P")
+        (field
+          (name "Manufacturer") "Panasonic")
+        (field
+          (name "Datasheet") "https://industrial.panasonic.com/cdbs/www-data/pdf/ATK0000/ATK0000CE28.pdf")
+        (field
+          (name "Description") "side-actuated tact switch")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Button_Switch_SMD:SW_SPST_EVQP7A")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "Lz6N4Df3E_")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:291"))
+      (libsource
+        (lib "NO_LIB")
+        (part "SW_Push"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "86613c65-2e81-59de-a697-f0a7804e35e3"))
+    (comp
+      (ref "TP1")
+      (value "UART_TX")
+      (description "")
+      (footprint "TestPoint:TestPoint_Pad_1.0x1.0mm")
+      (fields
+        (field
+          (name "MPN") "(copper pad)")
+        (field
+          (name "Manufacturer") "-")
+        (field
+          (name "Datasheet") "-")
+        (field
+          (name "Description") "test pad")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "TestPoint:TestPoint_Pad_1.0x1.0mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "BuQAkcOJtz")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:317"))
+      (libsource
+        (lib "NO_LIB")
+        (part "TestPad"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "7868593c-b2dc-50f2-98da-40ca167a6151"))
+    (comp
+      (ref "TP2")
+      (value "UART_RX")
+      (description "")
+      (footprint "TestPoint:TestPoint_Pad_1.0x1.0mm")
+      (fields
+        (field
+          (name "MPN") "(copper pad)")
+        (field
+          (name "Manufacturer") "-")
+        (field
+          (name "Datasheet") "-")
+        (field
+          (name "Description") "test pad")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "TestPoint:TestPoint_Pad_1.0x1.0mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "ZtaZe8_zdE")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:317"))
+      (libsource
+        (lib "NO_LIB")
+        (part "TestPad"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "4ed6cd24-7383-5f7f-9d2c-3abf18425e9f"))
+    (comp
+      (ref "TP3")
+      (value "VBAT")
+      (description "")
+      (footprint "TestPoint:TestPoint_Pad_1.0x1.0mm")
+      (fields
+        (field
+          (name "MPN") "(copper pad)")
+        (field
+          (name "Manufacturer") "-")
+        (field
+          (name "Datasheet") "-")
+        (field
+          (name "Description") "test pad")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "TestPoint:TestPoint_Pad_1.0x1.0mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "FQaaGAyLSK")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:320"))
+      (libsource
+        (lib "NO_LIB")
+        (part "TestPad"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "17c4d42d-bb9a-5141-8eb5-5749dea0013c"))
+    (comp
+      (ref "TP4")
+      (value "VSYS")
+      (description "")
+      (footprint "TestPoint:TestPoint_Pad_1.0x1.0mm")
+      (fields
+        (field
+          (name "MPN") "(copper pad)")
+        (field
+          (name "Manufacturer") "-")
+        (field
+          (name "Datasheet") "-")
+        (field
+          (name "Description") "test pad")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "TestPoint:TestPoint_Pad_1.0x1.0mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "H7llktEFY1")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:320"))
+      (libsource
+        (lib "NO_LIB")
+        (part "TestPad"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "35d3e29c-34c1-5090-8c19-25fddde03009"))
+    (comp
+      (ref "TP5")
+      (value "VDD_3V0")
+      (description "")
+      (footprint "TestPoint:TestPoint_Pad_1.0x1.0mm")
+      (fields
+        (field
+          (name "MPN") "(copper pad)")
+        (field
+          (name "Manufacturer") "-")
+        (field
+          (name "Datasheet") "-")
+        (field
+          (name "Description") "test pad")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "TestPoint:TestPoint_Pad_1.0x1.0mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "F3iUKFAy8v")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:320"))
+      (libsource
+        (lib "NO_LIB")
+        (part "TestPad"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "4514db83-ba94-5f6c-b519-e34a8a1f01d9"))
+    (comp
+      (ref "TP6")
+      (value "VDD_1V8")
+      (description "")
+      (footprint "TestPoint:TestPoint_Pad_1.0x1.0mm")
+      (fields
+        (field
+          (name "MPN") "(copper pad)")
+        (field
+          (name "Manufacturer") "-")
+        (field
+          (name "Datasheet") "-")
+        (field
+          (name "Description") "test pad")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "TestPoint:TestPoint_Pad_1.0x1.0mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "2URhfJ3j7Y")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:320"))
+      (libsource
+        (lib "NO_LIB")
+        (part "TestPad"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "787635f9-fb23-59dd-99de-121717d1a0e9"))
+    (comp
+      (ref "TP7")
+      (value "GND")
+      (description "")
+      (footprint "TestPoint:TestPoint_Pad_1.0x1.0mm")
+      (fields
+        (field
+          (name "MPN") "(copper pad)")
+        (field
+          (name "Manufacturer") "-")
+        (field
+          (name "Datasheet") "-")
+        (field
+          (name "Description") "test pad")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "TestPoint:TestPoint_Pad_1.0x1.0mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "Z4StCyt1zj")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:320"))
+      (libsource
+        (lib "NO_LIB")
+        (part "TestPad"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "3fc1c753-942a-5fe9-8487-b53be34d8f35"))
+    (comp
+      (ref "U1")
+      (value "nPM1300")
+      (description "")
+      (footprint "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm")
+      (fields
+        (field
+          (name "MPN") "NPM1300-QEAA-R7")
+        (field
+          (name "Manufacturer") "Nordic Semiconductor")
+        (field
+          (name "Datasheet") "https://docs.nordicsemi.com/bundle/ps_npm1300/page/pin.html")
+        (field
+          (name "Description") "PMIC: 800 mA charger, 2x 200 mA buck, 2x load switch/LDO, fuel gauge, ship mode")
+        (field
+          (name "Pinmap") "datasheet")
+        (field
+          (name "PinmapRef") "nPM1300 PS, QFN32 pin assignments (EP size: verify)")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "DBwjQb3wo9")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:92"))
+      (libsource
+        (lib "NO_LIB")
+        (part "nPM1300-QEAA"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "069583b6-f9b3-5f32-aed8-93b82090bd90"))
+    (comp
+      (ref "U2")
+      (value "nRF54L15")
+      (description "")
+      (footprint "Package_DFN_QFN:QFN-48-1EP_6x6mm_P0.4mm_EP4.6x4.6mm")
+      (fields
+        (field
+          (name "MPN") "NRF54L15-QFAA-R")
+        (field
+          (name "Manufacturer") "Nordic Semiconductor")
+        (field
+          (name "Datasheet") "https://docs.nordicsemi.com/bundle/ps_nrf54l15/page/chapters/pin.html")
+        (field
+          (name "Description") "Cortex-M33 128 MHz BLE SoC, 1.5 MB RRAM, 256 KB RAM, QFN48")
+        (field
+          (name "Pinmap") "datasheet")
+        (field
+          (name "PinmapRef") "nRF54L15 datasheet, QFN48 (QFAA) pin assignments (EP size 4.6 mm: verify against the package drawing)")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Package_DFN_QFN:QFN-48-1EP_6x6mm_P0.4mm_EP4.6x4.6mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "hdLpnNJIkz")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:168"))
+      (libsource
+        (lib "NO_LIB")
+        (part "nRF54L15-QFAA"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "2ac4ee4d-9d8c-547c-9020-509ba3bd5f8b"))
+    (comp
+      (ref "U3")
+      (value "BMI270")
+      (description "")
+      (footprint "Package_LGA:Bosch_LGA-14_3x2.5mm_P0.5mm")
+      (fields
+        (field
+          (name "MPN") "BMI270")
+        (field
+          (name "Manufacturer") "Bosch Sensortec")
+        (field
+          (name "Datasheet") "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmi270-ds000.pdf")
+        (field
+          (name "Description") "6-axis IMU, accel low-power mode down to 4 uA, 2 KB FIFO, I2C/SPI")
+        (field
+          (name "Pinmap") "datasheet")
+        (field
+          (name "PinmapRef") "BST-BMI270-DS000-08, table 22")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Package_LGA:Bosch_LGA-14_3x2.5mm_P0.5mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "IAssCVUVtQ")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:245"))
+      (libsource
+        (lib "NO_LIB")
+        (part "BMI270"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "800671f0-7d33-5d7b-a322-d13d67d1a9b4"))
+    (comp
+      (ref "U4")
+      (value "MAX30101")
+      (description "")
+      (footprint "OptoDevice:Maxim_OLGA-14_3.3x5.6mm_P0.8mm")
+      (fields
+        (field
+          (name "MPN") "MAX30101EFD+T")
+        (field
+          (name "Manufacturer") "Analog Devices (Maxim)")
+        (field
+          (name "Datasheet") "https://www.analog.com/media/en/technical-documentation/data-sheets/MAX30101.pdf")
+        (field
+          (name "Description") "PPG module: red/IR/green LEDs + photodiode, 18-bit ADC, I2C 0x57")
+        (field
+          (name "Pinmap") "datasheet")
+        (field
+          (name "PinmapRef") "MAX30101 datasheet, pin description (page 9)")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "OptoDevice:Maxim_OLGA-14_3.3x5.6mm_P0.8mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "avuk8hvxIN")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:265"))
+      (libsource
+        (lib "NO_LIB")
+        (part "MAX30101"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "5bd52541-26ae-52f7-b5cb-db912c5efcc9"))
+    (comp
+      (ref "Y1")
+      (value "32MHz")
+      (description "")
+      (footprint "Crystal:Crystal_SMD_2016-4Pin_2.0x1.6mm")
+      (fields
+        (field
+          (name "MPN") "XRCGB32M000F1H00R0")
+        (field
+          (name "Manufacturer") "Murata")
+        (field
+          (name "Datasheet") "https://www.murata.com/en-global/products/timingdevice")
+        (field
+          (name "Description") "32 MHz crystal 2016 (load caps internal to nRF54L15)")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Crystal:Crystal_SMD_2016-4Pin_2.0x1.6mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "qiRd2XGhoW")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:189"))
+      (libsource
+        (lib "NO_LIB")
+        (part "XTAL_32MHz"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "ce4e1691-1664-578b-8c76-621ccfb3b40f"))
+    (comp
+      (ref "Y2")
+      (value "32.768kHz")
+      (description "")
+      (footprint "Crystal:Crystal_SMD_2012-2Pin_2.0x1.2mm")
+      (fields
+        (field
+          (name "MPN") "ABS06-32.768KHZ-T")
+        (field
+          (name "Manufacturer") "Abracon")
+        (field
+          (name "Datasheet") "https://abracon.com/Resonators/abs06.pdf")
+        (field
+          (name "Description") "32.768 kHz crystal 2012 (LFXO, internal load caps)")
+        (field
+          (name "Pinmap") "kicad-fp")
+        (field
+          (name "PinmapRef"))
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Crystal:Crystal_SMD_2012-2Pin_2.0x1.2mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "vNA7BSz_PF")
+        (field
+          (name "SKiDL Line") "orbit_watch.py:196"))
+      (libsource
+        (lib "NO_LIB")
+        (part "XTAL_32k768"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "832a16ea-64cd-5b3f-bddc-9e73d90c73c0")))
+  (nets
+    (net
+      (code 1)
+      (name "BTN1")
+      (class "Default")
+      (node
+        (ref "SW2")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "5")
+        (pintype "INPUT")))
+    (net
+      (code 2)
+      (name "BTN2")
+      (class "Default")
+      (node
+        (ref "SW3")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "6")
+        (pintype "INPUT")))
+    (net
+      (code 3)
+      (name "BTN3")
+      (class "Default")
+      (node
+        (ref "SW4")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "7")
+        (pintype "INPUT")))
+    (net
+      (code 4)
+      (name "BUCK1_SW")
+      (class "Default")
+      (node
+        (ref "L1")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "3")
+        (pintype "POWER-OUT")))
+    (net
+      (code 5)
+      (name "BUCK2_SW")
+      (class "Default")
+      (node
+        (ref "L2")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "5")
+        (pintype "POWER-OUT")))
+    (net
+      (code 6)
+      (name "CHG_LED")
+      (class "Default")
+      (node
+        (ref "D2")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "25")
+        (pintype "OPEN-COLLECTOR")))
+    (net
+      (code 7)
+      (name "DCC")
+      (class "Default")
+      (node
+        (ref "L3")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "46")
+        (pintype "PASSIVE")))
+    (net
+      (code 8)
+      (name "DECA")
+      (class "Default")
+      (node
+        (ref "C13")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C15")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "L3")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "33")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "43")
+        (pintype "PASSIVE")))
+    (net
+      (code 9)
+      (name "DECD")
+      (class "Default")
+      (node
+        (ref "C14")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "45")
+        (pintype "PASSIVE")))
+    (net
+      (code 10)
+      (name "GND")
+      (class "Default")
+      (node
+        (ref "C1")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C10")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C11")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C12")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C13")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C14")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C15")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C16")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C17")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C18")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C19")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C2")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C20")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C21")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C22")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C23")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C24")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C3")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C4")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C5")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C6")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C7")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C8")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C9")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "D1")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J1")
+        (pin "A1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J1")
+        (pin "A12")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J1")
+        (pin "B1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J1")
+        (pin "B12")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J1")
+        (pin "SH")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J2")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J2")
+        (pin "MP")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J3")
+        (pin "5")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J4")
+        (pin "10")
+        (pintype "POWER-IN"))
+      (node
+        (ref "J4")
+        (pin "9")
+        (pintype "POWER-IN"))
+      (node
+        (ref "J4")
+        (pin "MP")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J5")
+        (pin "MP")
+        (pintype "PASSIVE"))
+      (node
+        (ref "Q1")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R1")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R2")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R3")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R8")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RT1")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "SW1")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "SW2")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "SW3")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "SW4")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "TP7")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "2")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U1")
+        (pin "33")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U1")
+        (pin "6")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U2")
+        (pin "32")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U2")
+        (pin "44")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U2")
+        (pin "49")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U3")
+        (pin "1")
+        (pintype "BIDIRECTIONAL"))
+      (node
+        (ref "U3")
+        (pin "6")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U3")
+        (pin "7")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U4")
+        (pin "12")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U4")
+        (pin "4")
+        (pintype "POWER-IN"))
+      (node
+        (ref "Y1")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "Y1")
+        (pin "4")
+        (pintype "PASSIVE")))
+    (net
+      (code 11)
+      (name "I2C_SCL")
+      (class "Default")
+      (node
+        (ref "R4")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "14")
+        (pintype "INPUT"))
+      (node
+        (ref "U2")
+        (pin "39")
+        (pintype "BIDIRECTIONAL"))
+      (node
+        (ref "U3")
+        (pin "13")
+        (pintype "INPUT"))
+      (node
+        (ref "U4")
+        (pin "2")
+        (pintype "INPUT")))
+    (net
+      (code 12)
+      (name "I2C_SDA")
+      (class "Default")
+      (node
+        (ref "R5")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "13")
+        (pintype "BIDIRECTIONAL"))
+      (node
+        (ref "U2")
+        (pin "40")
+        (pintype "BIDIRECTIONAL"))
+      (node
+        (ref "U3")
+        (pin "14")
+        (pintype "BIDIRECTIONAL"))
+      (node
+        (ref "U4")
+        (pin "3")
+        (pintype "BIDIRECTIONAL")))
+    (net
+      (code 13)
+      (name "IMU_INT1")
+      (class "Default")
+      (node
+        (ref "U2")
+        (pin "41")
+        (pintype "INPUT"))
+      (node
+        (ref "U3")
+        (pin "4")
+        (pintype "OUTPUT")))
+    (net
+      (code 14)
+      (name "LCD_DISP")
+      (class "Default")
+      (node
+        (ref "J4")
+        (pin "5")
+        (pintype "INPUT"))
+      (node
+        (ref "U2")
+        (pin "11")
+        (pintype "BIDIRECTIONAL")))
+    (net
+      (code 15)
+      (name "LCD_EXTCOMIN")
+      (class "Default")
+      (node
+        (ref "J4")
+        (pin "4")
+        (pintype "INPUT"))
+      (node
+        (ref "U2")
+        (pin "28")
+        (pintype "BIDIRECTIONAL")))
+    (net
+      (code 16)
+      (name "LCD_SCLK")
+      (class "Default")
+      (node
+        (ref "J4")
+        (pin "1")
+        (pintype "INPUT"))
+      (node
+        (ref "U2")
+        (pin "12")
+        (pintype "BIDIRECTIONAL")))
+    (net
+      (code 17)
+      (name "LCD_SCS")
+      (class "Default")
+      (node
+        (ref "J4")
+        (pin "3")
+        (pintype "INPUT"))
+      (node
+        (ref "R3")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "16")
+        (pintype "BIDIRECTIONAL")))
+    (net
+      (code 18)
+      (name "LCD_SI")
+      (class "Default")
+      (node
+        (ref "J4")
+        (pin "2")
+        (pintype "INPUT"))
+      (node
+        (ref "U2")
+        (pin "13")
+        (pintype "BIDIRECTIONAL")))
+    (net
+      (code 19)
+      (name "MOTOR_GATE")
+      (class "Default")
+      (node
+        (ref "Q1")
+        (pin "1")
+        (pintype "INPUT"))
+      (node
+        (ref "R7")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R8")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 20)
+      (name "MOTOR_N")
+      (class "Default")
+      (node
+        (ref "D3")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J5")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "Q1")
+        (pin "3")
+        (pintype "PASSIVE")))
+    (net
+      (code 21)
+      (name "MOTOR_PWM")
+      (class "Default")
+      (node
+        (ref "R7")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "8")
+        (pintype "BIDIRECTIONAL")))
+    (net
+      (code 22)
+      (name "N$1")
+      (class "Default")
+      (node
+        (ref "J1")
+        (pin "A5")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "23")
+        (pintype "PASSIVE")))
+    (net
+      (code 23)
+      (name "N$2")
+      (class "Default")
+      (node
+        (ref "J1")
+        (pin "B5")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "24")
+        (pintype "PASSIVE")))
+    (net
+      (code 24)
+      (name "N$3")
+      (class "Default")
+      (node
+        (ref "RT1")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "18")
+        (pintype "PASSIVE")))
+    (net
+      (code 25)
+      (name "N$4")
+      (class "Default")
+      (node
+        (ref "R1")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "17")
+        (pintype "PASSIVE")))
+    (net
+      (code 26)
+      (name "N$5")
+      (class "Default")
+      (node
+        (ref "R2")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "16")
+        (pintype "PASSIVE")))
+    (net
+      (code 27)
+      (name "PMIC_INT")
+      (class "Default")
+      (node
+        (ref "U1")
+        (pin "7")
+        (pintype "BIDIRECTIONAL"))
+      (node
+        (ref "U2")
+        (pin "38")
+        (pintype "INPUT")))
+    (net
+      (code 28)
+      (name "PPG_INT")
+      (class "Default")
+      (node
+        (ref "R6")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "42")
+        (pintype "INPUT"))
+      (node
+        (ref "U4")
+        (pin "13")
+        (pintype "OPEN-COLLECTOR")))
+    (net
+      (code 29)
+      (name "RF_ANT")
+      (class "Default")
+      (node
+        (ref "C16")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "L4")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "31")
+        (pintype "PASSIVE")))
+    (net
+      (code 30)
+      (name "RF_FEED")
+      (class "Default")
+      (node
+        (ref "AE1")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C17")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "L4")
+        (pin "2")
+        (pintype "PASSIVE")))
+    (net
+      (code 31)
+      (name "SHPHLD")
+      (class "Default")
+      (node
+        (ref "SW1")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "15")
+        (pintype "INPUT")))
+    (net
+      (code 32)
+      (name "SWDCLK")
+      (class "Default")
+      (node
+        (ref "J3")
+        (pin "4")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "26")
+        (pintype "INPUT")))
+    (net
+      (code 33)
+      (name "SWDIO")
+      (class "Default")
+      (node
+        (ref "J3")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "25")
+        (pintype "BIDIRECTIONAL")))
+    (net
+      (code 34)
+      (name "SWO")
+      (class "Default")
+      (node
+        (ref "J3")
+        (pin "6")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "18")
+        (pintype "BIDIRECTIONAL")))
+    (net
+      (code 35)
+      (name "UART_RX")
+      (class "Default")
+      (node
+        (ref "TP2")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "24")
+        (pintype "BIDIRECTIONAL")))
+    (net
+      (code 36)
+      (name "UART_TX")
+      (class "Default")
+      (node
+        (ref "TP1")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "23")
+        (pintype "BIDIRECTIONAL")))
+    (net
+      (code 37)
+      (name "VBAT")
+      (class "Default")
+      (node
+        (ref "C2")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J2")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "TP3")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "19")
+        (pintype "POWER-IN")))
+    (net
+      (code 38)
+      (name "VBUS")
+      (class "Default")
+      (node
+        (ref "C1")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "D1")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J1")
+        (pin "A4")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J1")
+        (pin "A9")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J1")
+        (pin "B4")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J1")
+        (pin "B9")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "21")
+        (pintype "POWER-IN")))
+    (net
+      (code 39)
+      (name "VDD_1V8")
+      (class "Default")
+      (node
+        (ref "C22")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C6")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "L2")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "TP6")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "32")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U4")
+        (pin "11")
+        (pintype "POWER-IN")))
+    (net
+      (code 40)
+      (name "VDD_3V0")
+      (class "Default")
+      (node
+        (ref "C10")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C11")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C12")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C18")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C19")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C20")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C21")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C5")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C7")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C8")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C9")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "D3")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J3")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J4")
+        (pin "6")
+        (pintype "POWER-IN"))
+      (node
+        (ref "J4")
+        (pin "7")
+        (pintype "POWER-IN"))
+      (node
+        (ref "J4")
+        (pin "8")
+        (pintype "INPUT"))
+      (node
+        (ref "J5")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "L1")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R4")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R5")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R6")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "TP5")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "1")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U1")
+        (pin "12")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U2")
+        (pin "10")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U2")
+        (pin "22")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U2")
+        (pin "36")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U2")
+        (pin "47")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U2")
+        (pin "48")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U3")
+        (pin "12")
+        (pintype "INPUT"))
+      (node
+        (ref "U3")
+        (pin "2")
+        (pintype "BIDIRECTIONAL"))
+      (node
+        (ref "U3")
+        (pin "3")
+        (pintype "BIDIRECTIONAL"))
+      (node
+        (ref "U3")
+        (pin "5")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U3")
+        (pin "8")
+        (pintype "POWER-IN")))
+    (net
+      (code 41)
+      (name "VLED")
+      (class "Default")
+      (node
+        (ref "C23")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C24")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "29")
+        (pintype "POWER-OUT"))
+      (node
+        (ref "U4")
+        (pin "10")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U4")
+        (pin "9")
+        (pintype "POWER-IN")))
+    (net
+      (code 42)
+      (name "VSYS")
+      (class "Default")
+      (node
+        (ref "C3")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C4")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "D2")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "TP4")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "20")
+        (pintype "POWER-OUT"))
+      (node
+        (ref "U1")
+        (pin "28")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U1")
+        (pin "4")
+        (pintype "POWER-IN")))
+    (net
+      (code 43)
+      (name "XC1")
+      (class "Default")
+      (node
+        (ref "U2")
+        (pin "34")
+        (pintype "PASSIVE"))
+      (node
+        (ref "Y1")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 44)
+      (name "XC2")
+      (class "Default")
+      (node
+        (ref "U2")
+        (pin "35")
+        (pintype "PASSIVE"))
+      (node
+        (ref "Y1")
+        (pin "3")
+        (pintype "PASSIVE")))
+    (net
+      (code 45)
+      (name "XL1")
+      (class "Default")
+      (node
+        (ref "U2")
+        (pin "1")
+        (pintype "BIDIRECTIONAL"))
+      (node
+        (ref "Y2")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 46)
+      (name "XL2")
+      (class "Default")
+      (node
+        (ref "U2")
+        (pin "2")
+        (pintype "BIDIRECTIONAL"))
+      (node
+        (ref "Y2")
+        (pin "2")
+        (pintype "PASSIVE")))
+    (net
+      (code 47)
+      (name "nRESET")
+      (class "Default")
+      (node
+        (ref "J3")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "30")
+        (pintype "INPUT")))))

@@ -1,0 +1,209 @@
+{
+ "steps": [
+  {
+   "case": "walk 1.5 Hz",
+   "seconds": 3000,
+   "truth": 4490,
+   "counted": 4479,
+   "error_pct": -0.24
+  },
+  {
+   "case": "walk 1.8 Hz",
+   "seconds": 3000,
+   "truth": 5390,
+   "counted": 5363,
+   "error_pct": -0.5
+  },
+  {
+   "case": "walk 2.0 Hz",
+   "seconds": 3000,
+   "truth": 5990,
+   "counted": 5961,
+   "error_pct": -0.48
+  },
+  {
+   "case": "walk 2.3 Hz",
+   "seconds": 3000,
+   "truth": 6890,
+   "counted": 6859,
+   "error_pct": -0.45
+  },
+  {
+   "case": "run 2.8 Hz",
+   "seconds": 3000,
+   "truth": 8390,
+   "counted": 8350,
+   "error_pct": -0.48
+  },
+  {
+   "case": "rest",
+   "seconds": 3000,
+   "truth": 0,
+   "counted": 0,
+   "error_pct": 0.0
+  },
+  {
+   "case": "typing",
+   "seconds": 3000,
+   "truth": 0,
+   "counted": 0,
+   "error_pct": 0.0
+  },
+  {
+   "case": "arm gestures",
+   "seconds": 3000,
+   "truth": 0,
+   "counted": 58,
+   "error_pct": 0.0
+  }
+ ],
+ "hr": [
+  {
+   "bpm": 45.0,
+   "pulse_amp": 600,
+   "noise_sigma": 20,
+   "mae_bpm": 0.281,
+   "coverage": 1.0
+  },
+  {
+   "bpm": 60.0,
+   "pulse_amp": 600,
+   "noise_sigma": 20,
+   "mae_bpm": 0.369,
+   "coverage": 1.0
+  },
+  {
+   "bpm": 75.0,
+   "pulse_amp": 600,
+   "noise_sigma": 20,
+   "mae_bpm": 0.513,
+   "coverage": 1.0
+  },
+  {
+   "bpm": 90.0,
+   "pulse_amp": 600,
+   "noise_sigma": 20,
+   "mae_bpm": 0.641,
+   "coverage": 1.0
+  },
+  {
+   "bpm": 120.0,
+   "pulse_amp": 600,
+   "noise_sigma": 20,
+   "mae_bpm": 0.768,
+   "coverage": 1.0
+  },
+  {
+   "bpm": 150.0,
+   "pulse_amp": 600,
+   "noise_sigma": 20,
+   "mae_bpm": 1.103,
+   "coverage": 1.0
+  },
+  {
+   "bpm": 180.0,
+   "pulse_amp": 600,
+   "noise_sigma": 20,
+   "mae_bpm": 1.296,
+   "coverage": 1.0
+  },
+  {
+   "bpm": 45.0,
+   "pulse_amp": 300,
+   "noise_sigma": 60,
+   "mae_bpm": 0.605,
+   "coverage": 1.0
+  },
+  {
+   "bpm": 60.0,
+   "pulse_amp": 300,
+   "noise_sigma": 60,
+   "mae_bpm": 0.492,
+   "coverage": 1.0
+  },
+  {
+   "bpm": 75.0,
+   "pulse_amp": 300,
+   "noise_sigma": 60,
+   "mae_bpm": 0.56,
+   "coverage": 1.0
+  },
+  {
+   "bpm": 90.0,
+   "pulse_amp": 300,
+   "noise_sigma": 60,
+   "mae_bpm": 0.645,
+   "coverage": 1.0
+  },
+  {
+   "bpm": 120.0,
+   "pulse_amp": 300,
+   "noise_sigma": 60,
+   "mae_bpm": 1.086,
+   "coverage": 1.0
+  },
+  {
+   "bpm": 150.0,
+   "pulse_amp": 300,
+   "noise_sigma": 60,
+   "mae_bpm": 1.575,
+   "coverage": 1.0
+  },
+  {
+   "bpm": 180.0,
+   "pulse_amp": 300,
+   "noise_sigma": 60,
+   "mae_bpm": 2.23,
+   "coverage": 1.0
+  },
+  {
+   "bpm": 45.0,
+   "pulse_amp": 150,
+   "noise_sigma": 60,
+   "mae_bpm": 14.442,
+   "coverage": 0.872
+  },
+  {
+   "bpm": 60.0,
+   "pulse_amp": 150,
+   "noise_sigma": 60,
+   "mae_bpm": 1.713,
+   "coverage": 0.964
+  },
+  {
+   "bpm": 75.0,
+   "pulse_amp": 150,
+   "noise_sigma": 60,
+   "mae_bpm": 1.112,
+   "coverage": 1.0
+  },
+  {
+   "bpm": 90.0,
+   "pulse_amp": 150,
+   "noise_sigma": 60,
+   "mae_bpm": 1.229,
+   "coverage": 0.995
+  },
+  {
+   "bpm": 120.0,
+   "pulse_amp": 150,
+   "noise_sigma": 60,
+   "mae_bpm": 1.92,
+   "coverage": 0.996
+  },
+  {
+   "bpm": 150.0,
+   "pulse_amp": 150,
+   "noise_sigma": 60,
+   "mae_bpm": 2.946,
+   "coverage": 1.0
+  },
+  {
+   "bpm": 180.0,
+   "pulse_amp": 150,
+   "noise_sigma": 60,
+   "mae_bpm": 6.24,
+   "coverage": 0.988
+  }
+ ]
+}

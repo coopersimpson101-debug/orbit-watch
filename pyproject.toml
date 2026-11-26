@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orbit-watch"
+version = "0.1.0"
+description = "Smartwatch OS (Cortex-M33 kernel) and nRF54L15 board design: build, test and hardware tooling"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "the orbit-watch authors" }]
+requires-python = ">=3.10"
+dependencies = ["ziglang>=0.13", "pytest>=8", "pyelftools>=0.31"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: C",
+  "Programming Language :: Python :: 3",
+  "Topic :: System :: Hardware",
+  "Topic :: Software Development :: Embedded Systems",
+  "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+hardware = ["skidl>=2.0"]
+figures = ["matplotlib>=3.8", "pillow>=10"]
+
+[project.urls]
+Homepage = "https://github.com/coopersimpson101-debug/orbit-watch"
+Repository = "https://github.com/coopersimpson101-debug/orbit-watch"
+Issues = "https://github.com/coopersimpson101-debug/orbit-watch/issues"
+Changelog = "https://github.com/coopersimpson101-debug/orbit-watch/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+packages = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
